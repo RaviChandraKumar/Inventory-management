@@ -19,7 +19,7 @@ namespace Data.Mappings
             HasKey(u => u.Id);
 
             // validations
-            Property(c => c.UserName)
+            Property(c => c.EmailId)
                     .IsRequired()
                     .HasMaxLength(100);
 
