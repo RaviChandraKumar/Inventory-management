@@ -77,6 +77,7 @@ namespace Web.Controllers
             }
 
             var model = new UserViewModel(user);
+
             return View("Edit", model);
             //return View();
         }
