@@ -50,6 +50,7 @@
     <Compile Include="AppContext.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Mappings\AccountMap.cs" />
+    <Compile Include="Mappings\AssetMap.cs" />
     <Compile Include="Mappings\ErrorLogMap.cs" />
     <Compile Include="Mappings\FacilityMap.cs" />
     <Compile Include="Mappings\UserMap.cs" />
@@ -89,6 +90,26 @@
     <Compile Include="Migrations\201803131803046_mar131.Designer.cs">
       <DependentUpon>201803131803046_mar131.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803152202368_update database.cs" />
+    <Compile Include="Migrations\201803152202368_update database.Designer.cs">
+      <DependentUpon>201803152202368_update database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803152210301_mar567.cs" />
+    <Compile Include="Migrations\201803152210301_mar567.Designer.cs">
+      <DependentUpon>201803152210301_mar567.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803152225478_03152018.cs" />
+    <Compile Include="Migrations\201803152225478_03152018.Designer.cs">
+      <DependentUpon>201803152225478_03152018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803160119337_asstcreate.cs" />
+    <Compile Include="Migrations\201803160119337_asstcreate.Designer.cs">
+      <DependentUpon>201803160119337_asstcreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803160129043_edit tinmestamp.cs" />
+    <Compile Include="Migrations\201803160129043_edit tinmestamp.Designer.cs">
+      <DependentUpon>201803160129043_edit tinmestamp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
@@ -120,6 +141,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803131803046_mar131.resx">
       <DependentUpon>201803131803046_mar131.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803152202368_update database.resx">
+      <DependentUpon>201803152202368_update database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803152210301_mar567.resx">
+      <DependentUpon>201803152210301_mar567.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803152225478_03152018.resx">
+      <DependentUpon>201803152225478_03152018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803160119337_asstcreate.resx">
+      <DependentUpon>201803160119337_asstcreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803160129043_edit tinmestamp.resx">
+      <DependentUpon>201803160129043_edit tinmestamp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
