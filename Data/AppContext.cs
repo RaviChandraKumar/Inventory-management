@@ -65,6 +65,6 @@ namespace Data
 
         public System.Data.Entity.DbSet<Core.Domains.Asset> Assets { get; set; }
 
-       
+        
     }
 }

@@ -133,16 +133,21 @@ namespace Web.Controllers
 
         // POST: Asset/Delete/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, AssetViewModel model)
         {
             try
             {
-                return RedirectToAction("Index");
+                var asset = _assetService.GetById(id);
+                _assetService.Delete(asset);
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                return RedirectToAction("AssetList");
             }
+            return RedirectToAction("AssetList");
         }
+    
     }
 }

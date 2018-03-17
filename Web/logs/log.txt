@@ -573,3 +573,99 @@ ERROR 2018-03-16 02:59:20,040 22605ms MvcApplication         Application_Error  
 ~/Views/Asset/Index.vbhtml
 ~/Views/Shared/Index.cshtml
 ~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 02:45:48,151 37316ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 02:47:02,114 19950ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 02:50:48,866  1121ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Delete(Int32)' in 'Web.Controllers.AssetController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-03-17 02:51:19,654 31909ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 02:51:33,519 45774ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 02:53:17,703 13594ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 02:54:29,529 11641ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 02:57:20,131 16140ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 03:02:33,127 19201ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 03:03:58,072 11611ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-17 03:05:14,655   966ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Delete(Int32)' in 'Web.Controllers.AssetController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-03-17 03:05:58,368   937ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Delete(Int32)' in 'Web.Controllers.AssetController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-03-17 03:06:45,355 20705ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
