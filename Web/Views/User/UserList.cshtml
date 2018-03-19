@@ -11,34 +11,35 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            User Name
-        </th>
+
         <th>
             Email Id
         </th>
         <th>
-           Is Active
+            Is Active
         </th>
+        <th>
+            Password
+        </th>
+
         <th></th>
     </tr>
 
 @foreach (var item in Model.Users) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.EmailId)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.IsActive)
         </td>
-        
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            @Html.ActionLink("Deactivate User", "Delete", new { id = item.Id })
         </td>
     </tr>
 }

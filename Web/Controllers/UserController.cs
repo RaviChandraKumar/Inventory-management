@@ -51,9 +51,9 @@ namespace Web.Controllers
                     var user = new User()
                     {
                         Id = userViewModel.Id,
-                        UserName = userViewModel.UserName,
                         EmailId = userViewModel.EmailId,
-                        IsActive = true
+                        IsActive = true,
+                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
                     };
 
                     _userService.InsertOrUpdate(user);
@@ -77,7 +77,7 @@ namespace Web.Controllers
             }
 
             var model = new UserViewModel(user);
-            Console.WriteLine(model.UserName);
+
             return View("Edit", model);
             //return View();
         }
@@ -92,7 +92,6 @@ namespace Web.Controllers
                 var user = new User()
                 {
                     Id = model.Id,
-                    UserName = model.UserName,
                     EmailId = model.EmailId,
                     IsActive = model.IsActive,
                 };

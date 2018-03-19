@@ -109,6 +109,21 @@
     <Compile Include="Migrations\201803160129043_edit tinmestamp.cs" />
     <Compile Include="Migrations\201803160129043_edit tinmestamp.Designer.cs">
       <DependentUpon>201803160129043_edit tinmestamp.cs</DependentUpon>
+    <Compile Include="Migrations\201803140043098_mar132.cs" />
+    <Compile Include="Migrations\201803140043098_mar132.Designer.cs">
+      <DependentUpon>201803140043098_mar132.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140117388_mar133.cs" />
+    <Compile Include="Migrations\201803140117388_mar133.Designer.cs">
+      <DependentUpon>201803140117388_mar133.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140134477_mar134.cs" />
+    <Compile Include="Migrations\201803140134477_mar134.Designer.cs">
+      <DependentUpon>201803140134477_mar134.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140148131_mar135.cs" />
+    <Compile Include="Migrations\201803140148131_mar135.Designer.cs">
+      <DependentUpon>201803140148131_mar135.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,6 +171,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803160129043_edit tinmestamp.resx">
       <DependentUpon>201803160129043_edit tinmestamp.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803140043098_mar132.resx">
+      <DependentUpon>201803140043098_mar132.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140117388_mar133.resx">
+      <DependentUpon>201803140117388_mar133.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140134477_mar134.resx">
+      <DependentUpon>201803140134477_mar134.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140148131_mar135.resx">
+      <DependentUpon>201803140148131_mar135.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

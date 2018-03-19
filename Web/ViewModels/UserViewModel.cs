@@ -8,10 +8,6 @@ namespace Web.ViewModels
         [Required]
         public int Id { get; set; }
 
-        [Required]
-        [MaxLength(100)]
-        [Display(Name = "UserName")]
-        public string UserName { get; set; }
 
         [MaxLength(200)]
         [Display(Name = "Email Id")]
@@ -20,13 +16,17 @@ namespace Web.ViewModels
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
+        [MaxLength(200)]
+        [Display(Name = "Password")]
+        public string Password { get; set; }
+
         public UserViewModel(User user)
         {
 
             Id = user.Id;
-            UserName = user.UserName;
             EmailId = user.EmailId;
             IsActive = user.IsActive;
+            Password = user.PasswordHash;
 
         }
 
