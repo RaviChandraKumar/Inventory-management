@@ -20,6 +20,7 @@ namespace Biz.Infrastructure
             Bind<IRepository<Account>>().To<Repository<Account>>();
             Bind<IRepository<Facility>>().To<Repository<Facility>>();
             Bind<IRepository<User>>().To<Repository<User>>();
+            Bind<IRepository<Asset>>().To<Repository<Asset>>();
         }
     }
 }
