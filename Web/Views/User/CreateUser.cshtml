@@ -1,0 +1,84 @@
+﻿@model Web.ViewModels.UserViewModel
+
+@{
+    ViewBag.Title = "CreateUser";
+}
+
+<h2>CreateUser</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>UserViewModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.EmailId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.EmailId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.EditorFor(model => model.IsActive)
+                @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+
+    @Html.LabelFor(model => model.ListOfAllFacilities, htmlAttributes: new { @class = "control-label col-md-2" })
+    <select name="listbox" id="listbox" onchange="run()">
+        <option value="Select a Value">Select a Value</option>
+        @foreach (var item in Model.ListOfAllFacilities)
+        {
+
+            <option value="@item.Id">
+              @item.Name
+            </option>
+        }
+    </select>
+
+    <br>
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.FacilityId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <input type="text" id="srt" placeholder="get value on option select"><br>
+        </div>*@
+  
+    <div class="form-group">
+    @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.FacilityId, new { htmlAttributes = new { @class = "form-control", @id = "FacilityId" } })
+        @Html.ValidationMessageFor(model => model.FacilityId, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+    }
+    <script>
+        function run() {
+            //alert("coolk");
+            document.getElementById("FacilityId").value = document.getElementById("listbox").value;
+        }
+    </script>
+
+    <div>
+        @Html.ActionLink("Back to UserList", "UserList", "User")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+
+    }

@@ -12,6 +12,12 @@ namespace Web.Controllers
     public class UserController : Controller
     {
         public readonly IUserService _userService;
+        public readonly IFacilityService _facilityService;
+
+        public UserController(IUserService userService,IFacilityService facilityService)
+        {
+            _userService = userService;
+            _facilityService = facilityService;
 
         public UserController(IUserService userService)
         {
@@ -33,6 +39,13 @@ namespace Web.Controllers
         }
 
         // GET: User/Create
+        public ActionResult CreateUser()
+        {
+            var facilities = _facilityService.GetAll();
+            var model = new UserViewModel {
+            ListOfAllFacilities = facilities.ToList()
+            };
+            return View("CreateUser", model);
         public ActionResult Create()
         {
             return View();
@@ -41,6 +54,7 @@ namespace Web.Controllers
         // POST: User/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public ActionResult CreateUser(UserViewModel userViewModel)
         public ActionResult Create(UserViewModel userViewModel)
         {
             try
@@ -52,6 +66,19 @@ namespace Web.Controllers
                     {
                         Id = userViewModel.Id,
                         EmailId = userViewModel.EmailId,
+                        IsActive = userViewModel.IsActive,
+                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8),
+                        FacilityId = userViewModel.FacilityId
+                    };
+
+                    _userService.InsertOrUpdate(user);
+                    
+                    return RedirectToAction("UserList");
+                }
+            }
+            catch(Exception e)
+            {
+                Console.Write(e.StackTrace);
                         IsActive = true,
                         PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
                     };
@@ -88,7 +115,11 @@ namespace Web.Controllers
         {
             try
             {
-               
+
+                var user = _userService.GetById(id);
+                user.Id = model.Id;
+                user.EmailId = model.EmailId;
+                user.IsActive = model.IsActive;
                 var user = new User()
                 {
                     Id = model.Id,

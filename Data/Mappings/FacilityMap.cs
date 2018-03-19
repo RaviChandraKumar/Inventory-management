@@ -1,4 +1,5 @@
 ﻿
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using Core.Domains;
 
@@ -23,6 +24,14 @@ namespace Data.Mappings
 
             Property(c => c.Address)
                 .IsRequired();
+
+            Property(c => c.UserId)
+                .IsOptional();
+
+           HasOptional(x => x.User)
+                .WithMany()
+                .HasForeignKey(x => x.UserId)
+                .WillCascadeOnDelete(false);
 
 
         }
