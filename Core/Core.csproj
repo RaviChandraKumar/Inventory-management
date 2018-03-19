@@ -47,6 +47,7 @@
     <Compile Include="BaseEntity.cs" />
     <Compile Include="DataTableModels.cs" />
     <Compile Include="Domains\Account.cs" />
+    <Compile Include="Domains\Asset.cs" />
     <Compile Include="Domains\ErrorLog.cs" />
     <Compile Include="Domains\Facility.cs" />
     <Compile Include="Domains\User.cs" />

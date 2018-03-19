@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 using Core.Domains;
 
 namespace Web.ViewModels
@@ -33,6 +34,14 @@ namespace Web.ViewModels
            IsActive = user.IsActive;
            Password = user.PasswordHash;
            FacilityId = user.FacilityId;
+
+        public UserViewModel(User user)
+        {
+
+            Id = user.Id;
+            EmailId = user.EmailId;
+            IsActive = user.IsActive;
+            Password = user.PasswordHash;
         }
 
         public UserViewModel()

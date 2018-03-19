@@ -18,6 +18,10 @@ namespace Web.Controllers
         {
             _userService = userService;
             _facilityService = facilityService;
+
+        public UserController(IUserService userService)
+        {
+            _userService = userService;
         }
 
         // GET: User
@@ -42,19 +46,22 @@ namespace Web.Controllers
             ListOfAllFacilities = facilities.ToList()
             };
             return View("CreateUser", model);
+        public ActionResult Create()
+        {
+            return View();
         }
 
         // POST: User/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CreateUser(UserViewModel userViewModel)
+        public ActionResult Create(UserViewModel userViewModel)
         {
             try
             {
                 // TODO: Add insert logic here
                 if (ModelState.IsValid)
                 {
-                    
                     var user = new User()
                     {
                         Id = userViewModel.Id,
@@ -72,6 +79,16 @@ namespace Web.Controllers
             catch(Exception e)
             {
                 Console.Write(e.StackTrace);
+                        IsActive = true,
+                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
+                    };
+
+                    _userService.InsertOrUpdate(user);
+                    return RedirectToAction("UserList");
+                }
+            }
+            catch
+            {
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
             return View();
@@ -87,7 +104,7 @@ namespace Web.Controllers
             }
 
             var model = new UserViewModel(user);
-            
+
             return View("Edit", model);
             //return View();
         }
@@ -103,7 +120,13 @@ namespace Web.Controllers
                 user.Id = model.Id;
                 user.EmailId = model.EmailId;
                 user.IsActive = model.IsActive;
-
+                var user = new User()
+                {
+                    Id = model.Id,
+                    EmailId = model.EmailId,
+                    IsActive = model.IsActive,
+                };
+                // TODO: Add update logic here
                 _userService.InsertOrUpdate(user);
 
                 return RedirectToAction("UserList");
@@ -113,7 +136,6 @@ namespace Web.Controllers
                 return View();
             }
         }
-
 
         // GET: User/Delete/5
         public ActionResult Delete(int id)

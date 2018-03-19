@@ -12,6 +12,7 @@ namespace Web.ViewModels
 
         public IEnumerable<UserViewModel> Users { get; set; }
 
+        public IEnumerable<AssetViewModel> Assets { get; set; }
 
         public StandardIndexViewModel(IEnumerable<Facility> facility)
         {
@@ -29,8 +30,15 @@ namespace Web.ViewModels
                 FacilityId = user.FacilityId
              
             });
+        public StandardIndexViewModel(IEnumerable<User> user)
+        {
+            Users = user.Select(x => new UserViewModel(x));
+        }
+
+        public StandardIndexViewModel(IEnumerable<Asset> asset)
+        {
+            Assets = asset.Select(x => new AssetViewModel(x));
         }
     }
-
 
 }
