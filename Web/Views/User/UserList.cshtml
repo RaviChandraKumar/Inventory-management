@@ -21,7 +21,9 @@
         <th>
             Password
         </th>
-
+        <th>
+            Facility Assigned
+        </th>
         <th></th>
     </tr>
 
@@ -36,12 +38,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.Password)
         </td>
-
+        <td>
+            @Html.DisplayFor(modelItem => item.FacilityId)
+        </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
             @Html.ActionLink("Deactivate User", "Delete", new { id = item.Id })
         </td>
     </tr>
 }
-
 </table>

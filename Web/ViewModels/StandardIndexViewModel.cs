@@ -14,12 +14,22 @@ namespace Web.ViewModels
 
         public IEnumerable<AssetViewModel> Assets { get; set; }
 
-
         public StandardIndexViewModel(IEnumerable<Facility> facility)
         {
             Facilities = facility.Select(x => new FacilityViewModel(x));
         }
 
+        public StandardIndexViewModel(IEnumerable<User> userList)
+        {
+            Users = userList.Select(user => new UserViewModel
+            {
+                EmailId = user.EmailId,
+                Id = user.Id,
+                IsActive = user.IsActive,
+                Password = user.PasswordHash,
+                FacilityId = user.FacilityId
+             
+            });
         public StandardIndexViewModel(IEnumerable<User> user)
         {
             Users = user.Select(x => new UserViewModel(x));
@@ -30,6 +40,5 @@ namespace Web.ViewModels
             Assets = asset.Select(x => new AssetViewModel(x));
         }
     }
-
 
 }

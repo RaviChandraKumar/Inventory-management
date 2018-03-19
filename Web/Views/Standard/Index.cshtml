@@ -6,6 +6,9 @@
     <h2>Facility</h2>
 
     <p>
+        @Html.ActionLink("Create New", "Create","Standard")
+        @Html.ActionLink("Create New User","CreateUser", "User")
+
         @Html.ActionLink("Create New", "Create")
         @Html.ActionLink("Create New User", "User/Create")
         <a href="/Asset/Create"> Create New Asset</a>
@@ -20,28 +23,34 @@
                 Landmark
             </th>
             <th>
+                User Id
+            </th>
+            <th>
                 Actions
             </th>
+
         </tr>
 
 
         @foreach (var item in Model.Facilities)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Landmark)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Landmark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
         }
-
     </table>
     <br />
 </div>

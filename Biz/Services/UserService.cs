@@ -11,15 +11,24 @@ namespace Biz.Services
     public class UserService : IUserService
     {
         private readonly IRepository<User> _userRepo;
+        private readonly IRepository<Facility> _facilityRepo;
 
         public UserService()
         {
             _userRepo = new Repository<User>();
+            _facilityRepo = new Repository<Facility>();
         }
 
         public UserService(IRepository<User> userRepo)
         {
             _userRepo = userRepo;
+            _facilityRepo = new Repository<Facility>();
+        }
+
+        public UserService(IRepository<User> userRepo, IRepository<Facility> facilityRepo)
+        {
+            _userRepo = userRepo;
+            _facilityRepo = facilityRepo;
         }
 
         public IQueryable<User> GetAll()
@@ -42,6 +51,10 @@ namespace Biz.Services
             if (user.Id == 0)
             {
                 _userRepo.Insert(user);
+                Facility facility = _facilityRepo.GetById(user.FacilityId);
+                User newUser = GetUserIdForFacility(user);
+                facility.UserId = newUser.Id; 
+                _facilityRepo.Update(facility);
                 sendEmailToUser(user);
             }
             else
@@ -49,6 +62,13 @@ namespace Biz.Services
                 _userRepo.Update(user);
             }
 
+        }
+
+        public User GetUserIdForFacility(User user)
+        {
+            var queryTable = _userRepo.Table;
+            User res = queryTable.Where(x => x.FacilityId==(user.FacilityId)).First<User>();
+            return res;
         }
 
         public void sendEmailToUser(User user)

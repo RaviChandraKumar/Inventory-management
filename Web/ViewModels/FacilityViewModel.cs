@@ -1,11 +1,13 @@
 ﻿using Core.Domains;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web.ViewModels
 {
     public class FacilityViewModel
     {
         [Required]
+        [ForeignKey("UserViewModel")]
         public int Id { get; set; }
 
         [Required]
@@ -37,6 +39,8 @@ namespace Web.ViewModels
         [MaxLength(60)]
         public string ZipCode { get; set; }
 
+        public int? UserId { get; set; }
+
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
@@ -52,6 +56,7 @@ namespace Web.ViewModels
             State = facility.State;
             ZipCode = facility.ZipCode;
             IsActive = facility.IsActive;
+            UserId = facility.UserId;
 
         }
 

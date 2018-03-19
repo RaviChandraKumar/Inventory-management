@@ -258,6 +258,8 @@
     <Content Include="Views\Standard\DemoCreate1.cshtml" />
     <Content Include="Views\Standard\Login.cshtml" />
     <Content Include="Views\User\UserList.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\CreateUser.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\Asset\Create.cshtml" />
