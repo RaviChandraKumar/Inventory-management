@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +13,7 @@ namespace Web.Controllers
     {
         public readonly IUserService _userService;
         public readonly IFacilityService _facilityService;
+        private object password;
 
         public StandardController(IUserService userService, IFacilityService facilityService)
         {
@@ -42,39 +43,19 @@ namespace Web.Controllers
             //}
             return View("UserLogin");
         }
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserViewModel userViewModel)
-         {
-            var users = _userService.GetByUserName(userViewModel.EmailId);
+        {
+            var users = _userService.GetByUserName(userViewModel.UserName);
             //var model = new StandardIndexViewModel(users);
             //return View("UserList", model);
             var username_from_db = users.UserName;
             var password = users.PasswordHash;
-            if(userViewModel.EmailId == username_from_db)
+            if (userViewModel.UserName == username_from_db)
             {
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Standard/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Standard/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                if(password == userViewModel.Password)
+                if (password == userViewModel.Password)
                 {
                     Session["id"] = users.Id;
                     Session["username"] = users.UserName;
@@ -112,6 +93,8 @@ namespace Web.Controllers
         {
             try
             {
+                // TODO: Add insert logic here
+
                 return RedirectToAction("Index");
             }
             catch
@@ -119,13 +102,6 @@ namespace Web.Controllers
                 return View();
             }
         }
-
-        // GET: Standard/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
         // POST: Standard/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
