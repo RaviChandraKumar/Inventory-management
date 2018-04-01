@@ -23,6 +23,7 @@ namespace Data.Repositories
         #endregion
 
         #region Methods
+
         public IQueryable<User> UserTable => Entities.Include(u => u.Facilities);
 
         public IQueryable<User> UserTableUntracked => Entities.AsNoTracking();

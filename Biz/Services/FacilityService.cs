@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Biz.Interfaces;
 using Core.Domains;
@@ -79,10 +80,14 @@ namespace Biz.Services
         {
             if (facility.Id == 0)
             {
+                DateTime currentdateTime = new DateTime();
+                facility.LastModifiedTimeStamp = currentdateTime;
                 _facilityRepo.InsertFacility(facility);
             }
             else
             {
+                DateTime currentdateTime = new DateTime();
+                facility.LastModifiedTimeStamp = currentdateTime;
                 _facilityRepo.UpdateFacility(facility);
             }
         }

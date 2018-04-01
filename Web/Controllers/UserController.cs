@@ -7,7 +7,6 @@ using Core.Domains;
 
 namespace Web.Controllers
 {
-    //[Authorize]
     public class UserController : Controller
     {
         public readonly IUserService _userService;
@@ -25,7 +24,6 @@ namespace Web.Controllers
         }
 
         // GET: User    
-        //[Authorize(Roles ="Admin, User")]
         public ActionResult UserList()
         {
             var users = _userService.GetAll();
@@ -48,7 +46,6 @@ namespace Web.Controllers
                 ListOfAllFacilities = facilities.ToList()
             };
             return View("Create",u, model);
-
         }
        
         // POST: User/Create
@@ -64,7 +61,7 @@ namespace Web.Controllers
                     var user = new User()
                     {
                         Id = userViewModel.Id,
-                        UserName = userViewModel.EmailId,
+                        UserName = userViewModel.UserName,
                         IsActive = userViewModel.IsActive,
                         PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
                     };
@@ -108,7 +105,7 @@ namespace Web.Controllers
                 var user = _userService.GetById(id);
 
                 user.Id = model.Id;
-                user.UserName = model.EmailId;
+                user.UserName = model.UserName;
                 user.IsActive = model.IsActive;
                 // TODO: Add update logic here
                 _userService.Update(user, model.ListOfFacilityIds);

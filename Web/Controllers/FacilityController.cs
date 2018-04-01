@@ -34,6 +34,34 @@ namespace Web.Controllers
             return View("FacilityList",model);
         }
 
+        public ActionResult ViewReport()
+        {
+            var facilities = _facilityService.GetAll();
+            var model = new StandardIndexViewModel(facilities);
+            return View("ViewReport", model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ViewReport(FacilityViewModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+
+                    return RedirectToAction("Index");
+                }
+            }
+
+            catch (RetryLimitExceededException /* dex */)
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+            }
+            return View();
+        }
+
         // GET: Student/Create
         public ActionResult Create()
         {

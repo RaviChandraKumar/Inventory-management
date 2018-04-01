@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Biz.Interfaces;
 using Core.Domains;
 using Data;
@@ -40,11 +41,16 @@ namespace Biz.Services
         {
             if (resource.Id == 0)
             {
+                DateTime currentdateTime = new DateTime();
+                resource.CreatedTimeStamp = currentdateTime;
+                resource.LastModifiedTimeStamp = currentdateTime;
+                resource.CurrentCount = resource.InitialCount;
                 _resourceRepo.InsertNewResourceForExisitingFacility(resource);
             }
             else
             {
-                // _resourceRepo.UpdateExisitingResourceWithFacility(resource);
+                DateTime currentdateTime = new DateTime();
+                resource.LastModifiedTimeStamp = currentdateTime;
                 _resourceRepo.UpdateResource(resource);
             }
         }

@@ -43,12 +43,17 @@ namespace Biz.Services
         {
             if (user.Id == 0)
             {
+                DateTime currentdateTime = new DateTime();
+                user.CreatedTimeStamp = currentdateTime;
+                user.LastModifiedTimeStamp = currentdateTime;
                 _userRepo.InsertNewUserForExisitingFacility(user, listOfFacilityIds);
             }
         }
 
         public void Update(User user, List<int> ListOfFacilityIds)
         {
+            DateTime currentdateTime = new DateTime();
+            user.LastModifiedTimeStamp = currentdateTime;
             _userRepo.UpdateExisitingUserWithFacility(user, ListOfFacilityIds);
         }
 

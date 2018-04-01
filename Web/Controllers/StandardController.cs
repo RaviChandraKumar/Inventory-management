@@ -7,12 +7,10 @@ using Web.ViewModels;
 using Core.Domains;
 using Biz.Interfaces;
 
-
 namespace Web.Controllers
 {
     public class StandardController : Controller
     {
-
         public readonly IUserService _userService;
         public readonly IFacilityService _facilityService;
 
@@ -35,7 +33,7 @@ namespace Web.Controllers
             //}
             return View("UserLogin");
         }
-
+        
         public ActionResult Login()
         {
             //if (userIsLoggedIn)
@@ -44,16 +42,37 @@ namespace Web.Controllers
             //}
             return View("UserLogin");
         }
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserViewModel userViewModel)
-        {
+         {
             var users = _userService.GetByUserName(userViewModel.EmailId);
             //var model = new StandardIndexViewModel(users);
             //return View("UserList", model);
             var username_from_db = users.UserName;
             var password = users.PasswordHash;
             if(userViewModel.EmailId == username_from_db)
+            {
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Standard/Edit/5
+        public ActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        // POST: Standard/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, FormCollection collection)
+        {
+            try
             {
                 if(password == userViewModel.Password)
                 {
@@ -93,8 +112,6 @@ namespace Web.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-
                 return RedirectToAction("Index");
             }
             catch

@@ -21,6 +21,10 @@ namespace Web.ViewModels
         [Display(Name = "Initial Count")]
         public int InitCount { get; set; }
 
+        [Required]
+        [Display(Name = "Current Count")]
+        public int CurrentCount { get; set; }
+
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
@@ -36,6 +40,7 @@ namespace Web.ViewModels
             Name = resource.Name;
             Description = resource.Description;
             InitCount = resource.InitialCount;
+            CurrentCount = resource.CurrentCount;
             IsActive = resource.IsActive;
             Facility = resource.Facility;
 

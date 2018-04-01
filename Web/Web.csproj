@@ -265,6 +265,7 @@
     <Content Include="Views\Resource\Delete.cshtml" />
     <Content Include="Views\Standard\UserHome.cshtml" />
     <Content Include="Views\Standard\UserLogin.cshtml" />
+    <Content Include="Views\Facility\ViewReport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -40,15 +40,11 @@
             @Html.DisplayFor(modelItem => item.Password)
         </td>
         <td>
-            
-            @*@for (var i = 0; i < item.ListOfFacilitiesAssigned.Count(); i++)
-    {
-       
-        @Html.DisplayFor(modelItem => item.ListOfFacilitiesAssigned.ElementAt(i).Resources.ElementAt(0).Name)
-        <br />
-
-        
-}*@
+            @for (var i = 0; i < item.ListOfFacilitiesAssigned.Count(); i++)
+            {
+                @Html.DisplayFor(modelItem => item.ListOfFacilitiesAssigned.ElementAt(i).Resources.ElementAt(0).Name)
+                <br />
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.Id,  }) |
