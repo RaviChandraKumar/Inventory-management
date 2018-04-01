@@ -13,7 +13,6 @@ namespace Web.Controllers
     {
         public readonly IUserService _userService;
         public readonly IFacilityService _facilityService;
-        private object password;
 
         public StandardController(IUserService userService, IFacilityService facilityService)
         {
