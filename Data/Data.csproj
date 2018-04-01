@@ -48,250 +48,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContext.cs" />
-    <Compile Include="IRepository.cs" />
-    <Compile Include="Mappings\AccountMap.cs" />
-    <Compile Include="Mappings\AssetMap.cs" />
+    <Compile Include="Mappings\ResourceMap.cs" />
     <Compile Include="Mappings\ErrorLogMap.cs" />
     <Compile Include="Mappings\FacilityMap.cs" />
     <Compile Include="Mappings\UserMap.cs" />
-    <Compile Include="Migrations\201609072146481_InitialCreate.cs" />
-    <Compile Include="Migrations\201609072146481_InitialCreate.Designer.cs">
-      <DependentUpon>201609072146481_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802170324543_AddedFacilityTable.cs" />
-    <Compile Include="Migrations\201802170324543_AddedFacilityTable.Designer.cs">
-      <DependentUpon>201802170324543_AddedFacilityTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803122131288_March12.cs" />
-    <Compile Include="Migrations\201803122131288_March12.Designer.cs">
-      <DependentUpon>201803122131288_March12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803122147086_changingDBName.cs" />
-    <Compile Include="Migrations\201803122147086_changingDBName.Designer.cs">
-      <DependentUpon>201803122147086_changingDBName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803122303402_exception.cs" />
-    <Compile Include="Migrations\201803122303402_exception.Designer.cs">
-      <DependentUpon>201803122303402_exception.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803130001404_test.cs" />
-    <Compile Include="Migrations\201803130001404_test.Designer.cs">
-      <DependentUpon>201803130001404_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803130006273_test1.cs" />
-    <Compile Include="Migrations\201803130006273_test1.Designer.cs">
-      <DependentUpon>201803130006273_test1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803131744507_mar13.cs" />
-    <Compile Include="Migrations\201803131744507_mar13.Designer.cs">
-      <DependentUpon>201803131744507_mar13.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803131803046_mar131.cs" />
-    <Compile Include="Migrations\201803131803046_mar131.Designer.cs">
-      <DependentUpon>201803131803046_mar131.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803152202368_update database.cs" />
-    <Compile Include="Migrations\201803152202368_update database.Designer.cs">
-      <DependentUpon>201803152202368_update database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803152210301_mar567.cs" />
-    <Compile Include="Migrations\201803152210301_mar567.Designer.cs">
-      <DependentUpon>201803152210301_mar567.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803152225478_03152018.cs" />
-    <Compile Include="Migrations\201803152225478_03152018.Designer.cs">
-      <DependentUpon>201803152225478_03152018.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803160119337_asstcreate.cs" />
-    <Compile Include="Migrations\201803160119337_asstcreate.Designer.cs">
-      <DependentUpon>201803160119337_asstcreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803160129043_edit tinmestamp.cs" />
-    <Compile Include="Migrations\201803160129043_edit tinmestamp.Designer.cs">
-      <DependentUpon>201803160129043_edit tinmestamp.cs</DependentUpon>
-    <Compile Include="Migrations\201803140043098_mar132.cs" />
-    <Compile Include="Migrations\201803140043098_mar132.Designer.cs">
-      <DependentUpon>201803140043098_mar132.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803140117388_mar133.cs" />
-    <Compile Include="Migrations\201803140117388_mar133.Designer.cs">
-      <DependentUpon>201803140117388_mar133.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803140134477_mar134.cs" />
-    <Compile Include="Migrations\201803140134477_mar134.Designer.cs">
-      <DependentUpon>201803140134477_mar134.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803140148131_mar135.cs" />
-    <Compile Include="Migrations\201803140148131_mar135.Designer.cs">
-      <DependentUpon>201803140148131_mar135.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803162129197_mar1632018.cs" />
-    <Compile Include="Migrations\201803162129197_mar1632018.Designer.cs">
-      <DependentUpon>201803162129197_mar1632018.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803162328479_093903.cs" />
-    <Compile Include="Migrations\201803162328479_093903.Designer.cs">
-      <DependentUpon>201803162328479_093903.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803162359551_ko.cs" />
-    <Compile Include="Migrations\201803162359551_ko.Designer.cs">
-      <DependentUpon>201803162359551_ko.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803170338311_kcdkl.cs" />
-    <Compile Include="Migrations\201803170338311_kcdkl.Designer.cs">
-      <DependentUpon>201803170338311_kcdkl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803170355119_mklk.cs" />
-    <Compile Include="Migrations\201803170355119_mklk.Designer.cs">
-      <DependentUpon>201803170355119_mklk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803170451040_foreignRelBwUserAndFacility.cs" />
-    <Compile Include="Migrations\201803170451040_foreignRelBwUserAndFacility.Designer.cs">
-      <DependentUpon>201803170451040_foreignRelBwUserAndFacility.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803170502305_Adding_Facility_id_in_user.cs" />
-    <Compile Include="Migrations\201803170502305_Adding_Facility_id_in_user.Designer.cs">
-      <DependentUpon>201803170502305_Adding_Facility_id_in_user.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803170519053_uppdateforeginKeyRelatioon.cs" />
-    <Compile Include="Migrations\201803170519053_uppdateforeginKeyRelatioon.Designer.cs">
-      <DependentUpon>201803170519053_uppdateforeginKeyRelatioon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803181844192_3\18\2018.cs" />
-    <Compile Include="Migrations\201803181845414_ds.cs" />
-    <Compile Include="Migrations\201803181845414_ds.Designer.cs">
-      <DependentUpon>201803181845414_ds.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803181857516_jk.cs" />
-    <Compile Include="Migrations\201803181857516_jk.Designer.cs">
-      <DependentUpon>201803181857516_jk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803181928285_djscd.cs" />
-    <Compile Include="Migrations\201803181928285_djscd.Designer.cs">
-      <DependentUpon>201803181928285_djscd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803182126000_fg.cs" />
-    <Compile Include="Migrations\201803182126000_fg.Designer.cs">
-      <DependentUpon>201803182126000_fg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803182212105_hjk.cs" />
-    <Compile Include="Migrations\201803182212105_hjk.Designer.cs">
-      <DependentUpon>201803182212105_hjk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803190003097_dfgfg.cs" />
-    <Compile Include="Migrations\201803190003097_dfgfg.Designer.cs">
-      <DependentUpon>201803190003097_dfgfg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803190541380_mappingInUserTable.cs" />
-    <Compile Include="Migrations\201803190541380_mappingInUserTable.Designer.cs">
-      <DependentUpon>201803190541380_mappingInUserTable.cs</DependentUpon>
+    <Compile Include="Migrations\201803302303431_March30.cs" />
+    <Compile Include="Migrations\201803302303431_March30.Designer.cs">
+      <DependentUpon>201803302303431_March30.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository.cs" />
+    <Compile Include="Repositories\FacilityRepository.cs" />
+    <Compile Include="Repositories\IFacilityRepository.cs" />
+    <Compile Include="Repositories\IResourceRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\ResourceRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609072146481_InitialCreate.resx">
-      <DependentUpon>201609072146481_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802170324543_AddedFacilityTable.resx">
-      <DependentUpon>201802170324543_AddedFacilityTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803122131288_March12.resx">
-      <DependentUpon>201803122131288_March12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803122147086_changingDBName.resx">
-      <DependentUpon>201803122147086_changingDBName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803122303402_exception.resx">
-      <DependentUpon>201803122303402_exception.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803130001404_test.resx">
-      <DependentUpon>201803130001404_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803130006273_test1.resx">
-      <DependentUpon>201803130006273_test1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803131744507_mar13.resx">
-      <DependentUpon>201803131744507_mar13.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803131803046_mar131.resx">
-      <DependentUpon>201803131803046_mar131.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803152202368_update database.resx">
-      <DependentUpon>201803152202368_update database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803152210301_mar567.resx">
-      <DependentUpon>201803152210301_mar567.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803152225478_03152018.resx">
-      <DependentUpon>201803152225478_03152018.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803160119337_asstcreate.resx">
-      <DependentUpon>201803160119337_asstcreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803160129043_edit tinmestamp.resx">
-      <DependentUpon>201803160129043_edit tinmestamp.cs</DependentUpon>
-    <EmbeddedResource Include="Migrations\201803140043098_mar132.resx">
-      <DependentUpon>201803140043098_mar132.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803140117388_mar133.resx">
-      <DependentUpon>201803140117388_mar133.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803140134477_mar134.resx">
-      <DependentUpon>201803140134477_mar134.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803140148131_mar135.resx">
-      <DependentUpon>201803140148131_mar135.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803162129197_mar1632018.resx">
-      <DependentUpon>201803162129197_mar1632018.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803162328479_093903.resx">
-      <DependentUpon>201803162328479_093903.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803162359551_ko.resx">
-      <DependentUpon>201803162359551_ko.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803170338311_kcdkl.resx">
-      <DependentUpon>201803170338311_kcdkl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803170355119_mklk.resx">
-      <DependentUpon>201803170355119_mklk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803170451040_foreignRelBwUserAndFacility.resx">
-      <DependentUpon>201803170451040_foreignRelBwUserAndFacility.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803170502305_Adding_Facility_id_in_user.resx">
-      <DependentUpon>201803170502305_Adding_Facility_id_in_user.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803170519053_uppdateforeginKeyRelatioon.resx">
-      <DependentUpon>201803170519053_uppdateforeginKeyRelatioon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803181845414_ds.resx">
-      <DependentUpon>201803181845414_ds.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803181857516_jk.resx">
-      <DependentUpon>201803181857516_jk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803181928285_djscd.resx">
-      <DependentUpon>201803181928285_djscd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803182126000_fg.resx">
-      <DependentUpon>201803182126000_fg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803182212105_hjk.resx">
-      <DependentUpon>201803182212105_hjk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803190003097_dfgfg.resx">
-      <DependentUpon>201803190003097_dfgfg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803190541380_mappingInUserTable.resx">
-      <DependentUpon>201803190541380_mappingInUserTable.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -300,12 +77,23 @@
       <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803302303431_March30.resx">
+      <DependentUpon>201803302303431_March30.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+
        Other similar extension points exist, see Microsoft.Common.targets.
+
   <Target Name="BeforeBuild">
+
   </Target>
+
   <Target Name="AfterBuild">
+
   </Target>
+
   -->
 </Project>

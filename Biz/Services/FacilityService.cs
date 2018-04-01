@@ -1,15 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Biz.Interfaces;
 using Core.Domains;
-using Data;
+using Data.Repositories;
 
 namespace Biz.Services
 {
     public class FacilityService : IFacilityService
     {
         #region Properties
-        private readonly IRepository<Facility> _facilityRepo;
+        private readonly IFacilityRepository _facilityRepo;
 
         #endregion
 
@@ -17,10 +18,10 @@ namespace Biz.Services
 
         public FacilityService()
         {
-            _facilityRepo = new Repository<Facility>();
+            _facilityRepo = new FacilityRepository();
         }
 
-        public FacilityService(IRepository<Facility> facilityRepo)
+        public FacilityService(IFacilityRepository facilityRepo)
         {
             _facilityRepo = facilityRepo;
         }
@@ -29,21 +30,21 @@ namespace Biz.Services
         #region Methods
         public IQueryable<Facility> GetAll()
         {
-            return _facilityRepo.Table;
+            return _facilityRepo.FacilityTable;
         }
 
         public void Delete(Facility facility)
         {
-            _facilityRepo.Delete(facility);
+            _facilityRepo.DeleteFacility(facility);
         }
         public Facility GetById(int id)
         {
-            return _facilityRepo.GetById(id);
+            return _facilityRepo.GetFacilityByFacilityId(id);
         }
 
         public IEnumerable<Facility> GetAllDataTable(string sortOrder, string search, bool? activeFilter = null)
         {
-            var queryTable = _facilityRepo.Table;
+            var queryTable = _facilityRepo.FacilityTable;
 
 
             if (activeFilter != null)
@@ -79,14 +80,23 @@ namespace Biz.Services
         {
             if (facility.Id == 0)
             {
-                _facilityRepo.Insert(facility);
+                DateTime currentdateTime = new DateTime();
+                facility.LastModifiedTimeStamp = currentdateTime;
+                _facilityRepo.InsertFacility(facility);
             }
             else
             {
-                _facilityRepo.Update(facility);
+                DateTime currentdateTime = new DateTime();
+                facility.LastModifiedTimeStamp = currentdateTime;
+                _facilityRepo.UpdateFacility(facility);
             }
         }
+
+        public IQueryable<Facility> GetFacilitiesWithIds(List<int> FacilityIds)
+        {
+            return _facilityRepo.GetFacilitiesWithIds(FacilityIds);
+        }
         #endregion
-        
+
     }
 }

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{7CEE5ED3-D850-42A5-9982-933901D56847}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biz", "Biz\Biz.csproj", "{D3D23E35-92CF-4D0E-A30F-C3F9D24AA2FE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{47B7233A-AF7F-4865-8EA0-4FE1DB3A793C} = {47B7233A-AF7F-4865-8EA0-4FE1DB3A793C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{850A523B-49F0-4867-BD78-DFE7AC401D79}"
 EndProject
@@ -36,5 +39,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03C5C636-DEEB-478C-8E72-727A3CEBFC70}
 	EndGlobalSection
 EndGlobal

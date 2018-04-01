@@ -27,7 +27,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model.Users) {
+@foreach (var item in Model.Users)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.EmailId)
@@ -39,10 +40,18 @@
             @Html.DisplayFor(modelItem => item.Password)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FacilityId)
+            
+            @for (var i = 0; i < item.ListOfFacilitiesAssigned.Count(); i++)
+    {
+       
+        @Html.DisplayFor(modelItem => item.ListOfFacilitiesAssigned.ElementAt(i).Resources.ElementAt(0).Name)
+        <br />
+
+        
+}
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id,  }) |
             @Html.ActionLink("Deactivate User", "Delete", new { id = item.Id })
         </td>
     </tr>

@@ -40,7 +40,7 @@ namespace Biz.Interfaces
         /// <param name="facility"></param>
         void Delete(Facility facility);
 
-
+        IQueryable<Facility> GetFacilitiesWithIds(List<int> FacilityIds);
 
     }
 }

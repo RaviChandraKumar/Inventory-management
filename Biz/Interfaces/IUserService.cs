@@ -1,4 +1,5 @@
 ﻿using Core.Domains;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Biz.Interfaces
@@ -25,6 +26,9 @@ namespace Biz.Interfaces
         /// Inserts or updates the model.
         /// </summary>
         /// <param name="account">The account.</param>
-        void InsertOrUpdate(User user);
+        void Insert(User user, List<int> ListOfFacilityIds);
+
+
+        void Update(User user, List<int> ListOfFacilityIds);
     }
 }

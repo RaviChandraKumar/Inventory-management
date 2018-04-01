@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Web.ViewModels;
 using Biz.Interfaces;
@@ -9,22 +7,25 @@ using Core.Domains;
 
 namespace Web.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         public readonly IUserService _userService;
         public readonly IFacilityService _facilityService;
 
-        public UserController(IUserService userService,IFacilityService facilityService)
+        public UserController(IUserService userService, IFacilityService facilityService)
         {
             _userService = userService;
             _facilityService = facilityService;
+        }
 
         public UserController(IUserService userService)
         {
             _userService = userService;
         }
 
-        // GET: User
+        // GET: User    
+        [Authorize(Roles ="Admin, User")]
         public ActionResult UserList()
         {
             var users = _userService.GetAll();
@@ -39,22 +40,19 @@ namespace Web.Controllers
         }
 
         // GET: User/Create
-        public ActionResult CreateUser()
+        public ActionResult Create()
         {
             var facilities = _facilityService.GetAll();
             var model = new UserViewModel {
-            ListOfAllFacilities = facilities.ToList()
+                ListOfAllFacilities = facilities.ToList()
             };
-            return View("CreateUser", model);
-        public ActionResult Create()
-        {
-            return View();
-        }
+            return View("Create", model);
 
+        }
+       
         // POST: User/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateUser(UserViewModel userViewModel)
         public ActionResult Create(UserViewModel userViewModel)
         {
             try
@@ -65,13 +63,12 @@ namespace Web.Controllers
                     var user = new User()
                     {
                         Id = userViewModel.Id,
-                        EmailId = userViewModel.EmailId,
+                        UserName = userViewModel.UserName,
                         IsActive = userViewModel.IsActive,
-                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8),
-                        FacilityId = userViewModel.FacilityId
+                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
                     };
 
-                    _userService.InsertOrUpdate(user);
+                    _userService.Insert(user, userViewModel.ListOfFacilityIds);
                     
                     return RedirectToAction("UserList");
                 }
@@ -79,16 +76,6 @@ namespace Web.Controllers
             catch(Exception e)
             {
                 Console.Write(e.StackTrace);
-                        IsActive = true,
-                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
-                    };
-
-                    _userService.InsertOrUpdate(user);
-                    return RedirectToAction("UserList");
-                }
-            }
-            catch
-            {
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
             return View();
@@ -104,6 +91,7 @@ namespace Web.Controllers
             }
 
             var model = new UserViewModel(user);
+            model.ListOfAllFacilities = _facilityService.GetAll().ToList();
 
             return View("Edit", model);
             //return View();
@@ -117,17 +105,12 @@ namespace Web.Controllers
             {
 
                 var user = _userService.GetById(id);
+
                 user.Id = model.Id;
-                user.EmailId = model.EmailId;
+                user.UserName = model.UserName;
                 user.IsActive = model.IsActive;
-                var user = new User()
-                {
-                    Id = model.Id,
-                    EmailId = model.EmailId,
-                    IsActive = model.IsActive,
-                };
                 // TODO: Add update logic here
-                _userService.InsertOrUpdate(user);
+                _userService.Update(user, model.ListOfFacilityIds);
 
                 return RedirectToAction("UserList");
             }

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Core.Domains;
 
 namespace Web.ViewModels
@@ -12,7 +10,7 @@ namespace Web.ViewModels
 
         public IEnumerable<UserViewModel> Users { get; set; }
 
-        public IEnumerable<AssetViewModel> Assets { get; set; }
+        public IEnumerable<ResourceViewModel> Resources { get; set; }
 
         public StandardIndexViewModel(IEnumerable<Facility> facility)
         {
@@ -21,23 +19,12 @@ namespace Web.ViewModels
 
         public StandardIndexViewModel(IEnumerable<User> userList)
         {
-            Users = userList.Select(user => new UserViewModel
-            {
-                EmailId = user.EmailId,
-                Id = user.Id,
-                IsActive = user.IsActive,
-                Password = user.PasswordHash,
-                FacilityId = user.FacilityId
-             
-            });
-        public StandardIndexViewModel(IEnumerable<User> user)
-        {
-            Users = user.Select(x => new UserViewModel(x));
+            Users = userList.Select(user => new UserViewModel(user));
         }
 
-        public StandardIndexViewModel(IEnumerable<Asset> asset)
+        public StandardIndexViewModel(IEnumerable<Resource> resources)
         {
-            Assets = asset.Select(x => new AssetViewModel(x));
+            Resources = resources.Select(x => new ResourceViewModel(x));
         }
     }
 

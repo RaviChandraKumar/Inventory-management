@@ -44,13 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Infrastructure\ServiceModule.cs" />
-    <Compile Include="Interfaces\IAccountService.cs" />
-    <Compile Include="Interfaces\IAssetService.cs" />
+    <Compile Include="Interfaces\IResourceService.cs" />
     <Compile Include="Interfaces\IFacilityService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AccountService.cs" />
-    <Compile Include="Services\AssetService.cs" />
+    <Compile Include="Services\ResourceService.cs" />
     <Compile Include="Services\FacilityService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>

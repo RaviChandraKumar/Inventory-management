@@ -12,10 +12,9 @@ namespace Web.Infrastructure
         /// </summary>
         public override void Load()
         {
-            Bind<IAccountService>().To<AccountService>();
             Bind<IFacilityService>().To<FacilityService>();
             Bind<IUserService>().To<UserService>();
-            Bind<IAssetService>().To<AssetService>();
+            Bind<IResourceService>().To<ResourceService>();
         }
     }
 }

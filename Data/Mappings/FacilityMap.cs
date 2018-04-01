@@ -1,5 +1,4 @@
 ﻿
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using Core.Domains;
 
@@ -25,15 +24,23 @@ namespace Data.Mappings
             Property(c => c.Address)
                 .IsRequired();
 
-            Property(c => c.UserId)
-                .IsOptional();
+            Property(c => c.CreatedTimeStamp)
+                .HasColumnType("datetime2");
 
-           HasOptional(x => x.User)
-                .WithMany()
-                .HasForeignKey(x => x.UserId)
-                .WillCascadeOnDelete(false);
+            Property(c => c.LastModifiedTimeStamp)
+                 .HasColumnType("datetime2");
 
+            HasMany(u => u.Users)
+                .WithMany(f => f.Facilities)
+                .Map(fu => { fu.MapLeftKey("FacilityFKId");
+                    fu.MapRightKey("UserFKId");
+                    fu.ToTable("FacilityUser");
+                });
+            
 
+            HasMany(r => r.Resources)
+                .WithRequired(f => f.Facility);
+                   
         }
     }
 }

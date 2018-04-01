@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-﻿using System.ComponentModel.DataAnnotations;
 using Core.Domains;
 
 namespace Web.ViewModels
@@ -12,36 +10,46 @@ namespace Web.ViewModels
         public int Id { get; set; }
 
 
-        [MaxLength(200)]
+        [MaxLength(20)]
         [Display(Name = "Email Id")]
-        public string EmailId { get; set; }
+        public string UserName { get; set; }
 
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
-        [MaxLength(200)]
+        [MaxLength(20)]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
+        [MaxLength(100)]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [MaxLength(100)]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [MaxLength(200)]
+        [Display(Name = "Role")]
+        public string Role { get; set; }
+
+        public string LastModifiedUser { get; set; }
+
         public IEnumerable<Facility> ListOfAllFacilities { get; set; }
-        
-        public int? FacilityId { get; set; }
+
+        public IEnumerable<Facility> ListOfFacilitiesAssigned { get; set; }
+
+        public List<int> ListOfFacilityIds { get; set; }
 
         public UserViewModel(User user)
         {
            Id = user.Id;
-           EmailId = user.EmailId;
+           UserName = user.UserName;
+            FirstName = user.FirstName;
+            LastName = user.LastName;
            IsActive = user.IsActive;
            Password = user.PasswordHash;
-           FacilityId = user.FacilityId;
-
-        public UserViewModel(User user)
-        {
-
-            Id = user.Id;
-            EmailId = user.EmailId;
-            IsActive = user.IsActive;
-            Password = user.PasswordHash;
+           ListOfFacilitiesAssigned = user.Facilities;
         }
 
         public UserViewModel()
