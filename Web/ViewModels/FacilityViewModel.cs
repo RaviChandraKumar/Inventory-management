@@ -1,4 +1,5 @@
 ﻿using Core.Domains;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -44,6 +45,10 @@ namespace Web.ViewModels
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
+        public IEnumerable<Resource> ResourcesAssigned { get; set; }
+
+        public IEnumerable<User> UsersAssigned { get; set; }
+
         public FacilityViewModel(Facility facility)
         {
 
@@ -56,7 +61,8 @@ namespace Web.ViewModels
             State = facility.State;
             ZipCode = facility.ZipCode;
             IsActive = facility.IsActive;
-            UserId = facility.UserId;
+            ResourcesAssigned = facility.Resources;
+            UsersAssigned = facility.Users;
 
         }
 

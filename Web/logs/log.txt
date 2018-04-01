@@ -1,0 +1,229 @@
+ERROR 2018-03-19 09:53:27,866 52733ms MvcApplication         Application_Error  - The view 'CreateUser' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/User/CreateUser.aspx
+~/Views/User/CreateUser.ascx
+~/Views/Shared/CreateUser.aspx
+~/Views/Shared/CreateUser.ascx
+~/Views/User/CreateUser.cshtml
+~/Views/User/CreateUser.vbhtml
+~/Views/Shared/CreateUser.cshtml
+~/Views/Shared/CreateUser.vbhtml
+ERROR 2018-03-19 09:54:31,783 116651ms MvcApplication         Application_Error  - The view 'CreateUser' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/User/CreateUser.aspx
+~/Views/User/CreateUser.ascx
+~/Views/Shared/CreateUser.aspx
+~/Views/Shared/CreateUser.ascx
+~/Views/User/CreateUser.cshtml
+~/Views/User/CreateUser.vbhtml
+~/Views/Shared/CreateUser.cshtml
+~/Views/Shared/CreateUser.vbhtml
+ERROR 2018-03-19 10:16:29,812 40373ms MvcApplication         Application_Error  - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Asset/Index.aspx
+~/Views/Asset/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Asset/Index.cshtml
+~/Views/Asset/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+ERROR 2018-03-22 20:41:37,930 88612ms MvcApplication         Application_Error  - The controller for path '/Asset/Create' was not found or does not implement IController.
+ERROR 2018-03-22 20:43:28,803 199484ms MvcApplication         Application_Error  - The controller for path '/Asset/Create' was not found or does not implement IController.
+ERROR 2018-03-22 20:56:06,496 349418ms MvcApplication         Application_Error  - C:\Users\User\AppData\Local\Temp\Temporary ASP.NET Files\vs\10a5763b\cccd619f\App_Web_create.cshtml.37b9552a.uto5vwvj.0.cs(31): error CS0234: The type or namespace name 'AssetViewModel' does not exist in the namespace 'Web.ViewModels' (are you missing an assembly reference?)
+ERROR 2018-03-22 22:33:47,086 440156ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-22 23:24:50,232 307906ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-22 23:28:14,502 23034ms MvcApplication         Application_Error  - One or more validation errors were detected during model generation:
+
+Data.FacilityUser: : EntityType 'FacilityUser' has no key defined. Define the key for this EntityType.
+FacilityUsers: EntityType: EntitySet 'FacilityUsers' is based on type 'FacilityUser' that has no keys defined.
+
+ERROR 2018-03-22 23:28:45,524 54056ms MvcApplication         Application_Error  - One or more validation errors were detected during model generation:
+
+Data.FacilityUser: : EntityType 'FacilityUser' has no key defined. Define the key for this EntityType.
+FacilityUsers: EntityType: EntitySet 'FacilityUsers' is based on type 'FacilityUser' that has no keys defined.
+
+ERROR 2018-03-23 00:01:58,885 412115ms MvcApplication         Application_Error  - The properties expression 'u => new <>f__AnonymousType0`2(Facility_Id = u.Facility_Id, User_Id = u.User_Id)' is not valid. The expression should represent a property: C#: 't => t.MyProperty'  VB.Net: 'Function(t) t.MyProperty'. When specifying multiple properties use an anonymous type: C#: 't => new { t.MyProperty1, t.MyProperty2 }'  VB.Net: 'Function(t) New With { t.MyProperty1, t.MyProperty2 }'.
+ERROR 2018-03-23 07:29:35,055 291238ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-23 07:57:54,568 194762ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-23 08:00:03,597 323792ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-23 08:04:26,337 586532ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-23 08:23:46,651 577477ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-23 12:44:22,038 1008835ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-23 23:25:31,006 367022ms MvcApplication         Application_Error  - There is already an open DataReader associated with this Command which must be closed first.
+ERROR 2018-03-23 23:27:31,427 487444ms MvcApplication         Application_Error  - There is already an open DataReader associated with this Command which must be closed first.
+ERROR 2018-03-24 01:38:29,956 574276ms MvcApplication         Application_Error  - The using block is missing a closing "}" character.  Make sure you have a matching "}" character for all the "{" characters within this block, and that none of the "}" characters are being interpreted as markup.
+
+ERROR 2018-03-24 01:46:57,065 146757ms MvcApplication         Application_Error  - The using block is missing a closing "}" character.  Make sure you have a matching "}" character for all the "{" characters within this block, and that none of the "}" characters are being interpreted as markup.
+
+ERROR 2018-03-24 21:40:00,002 208504ms MvcApplication         Application_Error  - DataBinding: 'System.Data.Entity.DynamicProxies.Facility_5429161E95C87E45A3F1D6CF31A61E3632042E1B7767E805CD49EFED25DAB21E' does not contain a property with the name 'Facility'.
+ERROR 2018-03-24 21:45:40,117 548620ms MvcApplication         Application_Error  - C:\Users\User\Documents\Inventory-management-master\Inventory-management\Web\Views\User\UserList.cshtml(42): error CS1061: 'UserViewModel' does not contain a definition for 'FacilityId' and no extension method 'FacilityId' accepting a first argument of type 'UserViewModel' could be found (are you missing a using directive or an assembly reference?)
+ERROR 2018-03-24 21:56:54,450 12314ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-03-24 23:01:36,946 319232ms MvcApplication         Application_Error  - Value cannot be null.
+Parameter name: source
+ERROR 2018-03-24 23:04:56,419 518706ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-24 23:17:25,529 268611ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-24 23:26:21,495 71240ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-24 23:29:17,847 247592ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-24 23:38:50,306 347272ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 00:00:18,628 280323ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 00:02:29,909 411604ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 00:19:32,575 271498ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 01:13:29,735 676054ms MvcApplication         Application_Error  - The view 'Delete' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/User/Delete.aspx
+~/Views/User/Delete.ascx
+~/Views/Shared/Delete.aspx
+~/Views/Shared/Delete.ascx
+~/Views/User/Delete.cshtml
+~/Views/User/Delete.vbhtml
+~/Views/Shared/Delete.cshtml
+~/Views/Shared/Delete.vbhtml
+ERROR 2018-03-25 02:33:46,367 2025063ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 02:37:25,573 2244269ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 03:46:49,775 645751ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 04:05:28,579 497432ms MvcApplication         Application_Error  - The parameter 'expression' must evaluate to an IEnumerable when multiple selection is allowed.
+ERROR 2018-03-25 04:15:42,161 1111014ms MvcApplication         Application_Error  - The parameter 'expression' must evaluate to an IEnumerable when multiple selection is allowed.
+ERROR 2018-03-25 04:25:02,549 1671402ms MvcApplication         Application_Error  - C:\Users\User\AppData\Local\Temp\Temporary ASP.NET Files\vs\10a5763b\cccd619f\App_Web_edit.cshtml.37b9552a.t-nszjfm.0.cs(31): error CS0234: The type or namespace name 'AssetViewModel' does not exist in the namespace 'Web.ViewModels' (are you missing an assembly reference?)
+ERROR 2018-03-25 04:34:12,368 2221221ms MvcApplication         Application_Error  - Value cannot be null.
+Parameter name: items
+ERROR 2018-03-25 04:54:11,491 678026ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 04:54:11,497 678032ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 04:58:30,810 937346ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-25 05:01:03,976 1090511ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-26 17:26:25,219 477888ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-26 17:28:14,284 586954ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-03-27 13:52:23,497  6015ms MvcApplication         Application_Error  - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Login.aspx
+~/Views/Standard/Login.ascx
+~/Views/Shared/Login.aspx
+~/Views/Shared/Login.ascx
+~/Views/Standard/Login.cshtml
+~/Views/Standard/Login.vbhtml
+~/Views/Shared/Login.cshtml
+~/Views/Shared/Login.vbhtml
+ERROR 2018-03-27 13:52:39,308 21826ms MvcApplication         Application_Error  - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Login.aspx
+~/Views/Standard/Login.ascx
+~/Views/Shared/Login.aspx
+~/Views/Shared/Login.ascx
+~/Views/Standard/Login.cshtml
+~/Views/Standard/Login.vbhtml
+~/Views/Shared/Login.cshtml
+~/Views/Shared/Login.vbhtml
+ERROR 2018-03-27 13:53:47,905 90423ms MvcApplication         Application_Error  - Unable to update database to match the current model because there are pending changes and automatic migration is disabled. Either write the pending model changes to a code-based migration or enable automatic migration. Set DbMigrationsConfiguration.AutomaticMigrationsEnabled to true to enable automatic migration.
+ERROR 2018-03-27 13:57:45,630  3795ms MvcApplication         Application_Error  - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Login.aspx
+~/Views/Standard/Login.ascx
+~/Views/Shared/Login.aspx
+~/Views/Shared/Login.ascx
+~/Views/Standard/Login.cshtml
+~/Views/Standard/Login.vbhtml
+~/Views/Shared/Login.cshtml
+~/Views/Shared/Login.vbhtml
+ERROR 2018-03-27 14:04:35,798 413962ms MvcApplication         Application_Error  - There is already an open DataReader associated with this Command which must be closed first.
+ERROR 2018-03-27 14:04:35,963 414127ms MvcApplication         Application_Error  - A public action method 'FacilityTest' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-03-30 16:11:43,926  7501ms MvcApplication         Application_Error  - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Login.aspx
+~/Views/Standard/Login.ascx
+~/Views/Shared/Login.aspx
+~/Views/Shared/Login.ascx
+~/Views/Standard/Login.cshtml
+~/Views/Standard/Login.vbhtml
+~/Views/Shared/Login.cshtml
+~/Views/Shared/Login.vbhtml
+ERROR 2018-03-30 19:36:25,646  1059ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:36:55,406  1030ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:45:31,971  1064ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:45:44,808 13901ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-03-30 19:47:20,106  1023ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:55:50,404  1143ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:56:10,919 21658ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 19:58:27,929 20231ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 19:58:39,505 31807ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 19:59:33,221  5855ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 19:59:42,153 14787ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:17:19,648   951ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:19:30,565 18507ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:20:41,494  6587ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:21:02,647 27741ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:21:51,854  8285ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:26:31,536  6328ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:27:59,744 18258ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:29:11,475  1057ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:30:12,071  1174ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:30:41,328   878ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:32:59,843 28834ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:34:41,926 11836ms MvcApplication         Application_Error  - The controller for path '/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:36:06,038 11223ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:38:10,104 59534ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:44:36,626   857ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:45:11,995 36226ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:46:23,837  1020ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-31 00:33:02,434 318633ms MvcApplication         Application_Error  - The view 'UserList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/UserList.aspx
+~/Views/Standard/UserList.ascx
+~/Views/Shared/UserList.aspx
+~/Views/Shared/UserList.ascx
+~/Views/Standard/UserList.cshtml
+~/Views/Standard/UserList.vbhtml
+~/Views/Shared/UserList.cshtml
+~/Views/Shared/UserList.vbhtml
+ERROR 2018-03-31 00:34:57,263 433462ms MvcApplication         Application_Error  - The view 'UserList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/UserList.aspx
+~/Views/Standard/UserList.ascx
+~/Views/Shared/UserList.aspx
+~/Views/Shared/UserList.ascx
+~/Views/Standard/UserList.cshtml
+~/Views/Standard/UserList.vbhtml
+~/Views/Shared/UserList.cshtml
+~/Views/Shared/UserList.vbhtml
+ERROR 2018-03-31 00:35:29,029 465228ms MvcApplication         Application_Error  - The view 'UserList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/UserList.aspx
+~/Views/Standard/UserList.ascx
+~/Views/Shared/UserList.aspx
+~/Views/Shared/UserList.ascx
+~/Views/Standard/UserList.cshtml
+~/Views/Standard/UserList.vbhtml
+~/Views/Shared/UserList.cshtml
+~/Views/Shared/UserList.vbhtml
+ERROR 2018-03-31 00:35:35,694 471893ms MvcApplication         Application_Error  - The view 'UserList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/UserList.aspx
+~/Views/Standard/UserList.ascx
+~/Views/Shared/UserList.aspx
+~/Views/Shared/UserList.ascx
+~/Views/Standard/UserList.cshtml
+~/Views/Standard/UserList.vbhtml
+~/Views/Shared/UserList.cshtml
+~/Views/Shared/UserList.vbhtml
+ERROR 2018-03-31 00:36:39,555  1148ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-31 00:36:47,257  8849ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-03-31 00:36:48,959 10551ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-03-31 01:18:58,382 50611ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-01 15:22:12,508  1743ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:27:06,707   819ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:31:08,556  1553ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:32:07,873   988ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:32:51,375  1023ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:33:38,105   992ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:34:35,341   871ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:36:59,401   802ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:39:48,281   841ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:45:05,104   936ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:46:21,909   857ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:47:05,689   871ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:47:51,310   843ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:48:42,974   859ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:49:26,927   816ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:52:00,490   832ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:54:26,609   848ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:55:18,516   838ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:56:07,278   831ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:57:09,618  1060ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:58:32,549  1217ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 16:01:55,494   828ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 16:03:12,139   802ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 16:04:48,496 97159ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-01 16:05:04,663 113327ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-01 16:05:26,868 135531ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-01 16:07:11,419 12892ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
+ERROR 2018-04-01 16:07:26,319 27792ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
+ERROR 2018-04-01 16:09:08,235 29498ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-01 16:15:48,364   838ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.

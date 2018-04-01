@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Core.Domains;
+﻿using Core.Domains;
 using Data;
+using Data.Repositories;
 using Ninject.Modules;
 
 namespace Biz.Infrastructure
@@ -17,10 +13,9 @@ namespace Biz.Infrastructure
         /// </summary>
         public override void Load()
         {
-            Bind<IRepository<Account>>().To<Repository<Account>>();
-            Bind<IRepository<Facility>>().To<Repository<Facility>>();
-            Bind<IRepository<User>>().To<Repository<User>>();
-            Bind<IRepository<Asset>>().To<Repository<Asset>>();
+            Bind<IFacilityRepository>().To<FacilityRepository>();
+            Bind<IUserRepository>().To<UserRepository>();
+            Bind<IResourceRepository>().To<ResourceRepository>();
         }
     }
 }

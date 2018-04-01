@@ -183,8 +183,9 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AssetController.cs" />
+    <Compile Include="Controllers\ResourceController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\FacilityController.cs" />
     <Compile Include="Controllers\StandardController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -193,7 +194,7 @@
     <Compile Include="Infrastructure\WebModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\AssetViewModel.cs" />
+    <Compile Include="ViewModels\ResourceViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="ViewModels\ErrorViewModel.cs" />
     <Compile Include="ViewModels\FacilityViewModel.cs" />
@@ -250,22 +251,20 @@
     <Content Include="Views\Error\GeneralError.cshtml" />
     <Content Include="Views\Error\HttpError404.cshtml" />
     <Content Include="Views\Error\HttpError500.cshtml" />
-    <Content Include="Views\Standard\Index.cshtml" />
-    <Content Include="Views\Standard\Create.cshtml" />
-    <Content Include="Views\Standard\Edit.cshtml" />
-    <Content Include="Views\Standard\Details.cshtml" />
-    <Content Include="Views\Standard\Delete.cshtml" />
-    <Content Include="Views\Standard\DemoCreate1.cshtml" />
-    <Content Include="Views\Standard\Login.cshtml" />
+    <Content Include="Views\Facility\FacilityList.cshtml" />
+    <Content Include="Views\Facility\Create.cshtml" />
+    <Content Include="Views\Facility\Edit.cshtml" />
+    <Content Include="Views\Facility\Details.cshtml" />
+    <Content Include="Views\Facility\Delete.cshtml" />
     <Content Include="Views\User\UserList.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
-    <Content Include="Views\User\CreateUser.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
-    <Content Include="Views\User\Edit.cshtml" />
-    <Content Include="Views\Asset\Create.cshtml" />
-    <Content Include="Views\Asset\AssetList.cshtml" />
-    <Content Include="Views\Asset\Edit.cshtml" />
-    <Content Include="Views\Asset\Delete.cshtml" />
+    <Content Include="Views\Resource\Create.cshtml" />
+    <Content Include="Views\Resource\ResourceList.cshtml" />
+    <Content Include="Views\Resource\Edit.cshtml" />
+    <Content Include="Views\Resource\Delete.cshtml" />
+    <Content Include="Views\Standard\UserHome.cshtml" />
+    <Content Include="Views\Standard\UserLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -287,10 +286,6 @@
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{850A523B-49F0-4867-BD78-DFE7AC401D79}</Project>
       <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Project>
-      <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

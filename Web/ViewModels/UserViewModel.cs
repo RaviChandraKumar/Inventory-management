@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-﻿using System.ComponentModel.DataAnnotations;
 using Core.Domains;
 
 namespace Web.ViewModels
@@ -24,24 +22,18 @@ namespace Web.ViewModels
         public string Password { get; set; }
 
         public IEnumerable<Facility> ListOfAllFacilities { get; set; }
-        
-        public int? FacilityId { get; set; }
+
+        public IEnumerable<Facility> ListOfFacilitiesAssigned { get; set; }
+
+        public List<int> ListOfFacilityIds { get; set; }
 
         public UserViewModel(User user)
         {
            Id = user.Id;
-           EmailId = user.EmailId;
+           EmailId = user.UserName;
            IsActive = user.IsActive;
            Password = user.PasswordHash;
-           FacilityId = user.FacilityId;
-
-        public UserViewModel(User user)
-        {
-
-            Id = user.Id;
-            EmailId = user.EmailId;
-            IsActive = user.IsActive;
-            Password = user.PasswordHash;
+           ListOfFacilitiesAssigned = user.Facilities;
         }
 
         public UserViewModel()
