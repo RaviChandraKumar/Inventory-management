@@ -130,3 +130,4 @@ ERROR 2018-03-30 16:11:43,926  7501ms MvcApplication         Application_Error  
 ~/Views/Shared/Login.cshtml
 ~/Views/Shared/Login.vbhtml
 ERROR 2018-03-30 16:55:30,577  4983ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 16:38:04,153  3846ms MvcApplication         Application_Error  - C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\Views\Standard\UserLogin.cshtml(19): error CS1061: 'UserViewModel' does not contain a definition for 'EmailId' and no extension method 'EmailId' accepting a first argument of type 'UserViewModel' could be found (are you missing a using directive or an assembly reference?)
