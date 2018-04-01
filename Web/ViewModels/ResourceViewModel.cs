@@ -25,7 +25,6 @@ namespace Web.ViewModels
         [Display(Name = "Current Count")]
         public int CurrentCount { get; set; }
 
-
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 

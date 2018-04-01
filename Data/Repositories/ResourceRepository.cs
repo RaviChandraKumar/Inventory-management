@@ -25,6 +25,7 @@ namespace Data.Repositories
         #endregion
 
         #region Methods
+        
         public IQueryable<Resource> ResourceTable => Entities.Include(r => r.Facility).Where(r => r.IsActive == true);
 
         public IQueryable<Resource> ResourceTableUntracked => Entities.AsNoTracking();
@@ -52,8 +53,8 @@ namespace Data.Repositories
 
         public Resource GetResourceByResourceId(int id)
         {
-            return ResourceTable.Where(r => r.Id == id).FirstOrDefault();
-        }
+            return ResourceTable.Where(u => u.Id == id).FirstOrDefault();
+          }
 
         public IDictionary<string, object> GetModifiedProperties(Resource entity)
         {

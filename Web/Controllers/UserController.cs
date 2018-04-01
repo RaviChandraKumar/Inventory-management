@@ -7,7 +7,6 @@ using Core.Domains;
 
 namespace Web.Controllers
 {
-    [Authorize]
     public class UserController : Controller
     {
         public readonly IUserService _userService;
@@ -25,7 +24,6 @@ namespace Web.Controllers
         }
 
         // GET: User    
-        [Authorize(Roles ="Admin, User")]
         public ActionResult UserList()
         {
             var users = _userService.GetAll();
@@ -42,12 +40,12 @@ namespace Web.Controllers
         // GET: User/Create
         public ActionResult Create()
         {
+            var u = Session["username"].ToString();
             var facilities = _facilityService.GetAll();
             var model = new UserViewModel {
                 ListOfAllFacilities = facilities.ToList()
             };
-            return View("Create", model);
-
+            return View("Create",u, model);
         }
        
         // POST: User/Create

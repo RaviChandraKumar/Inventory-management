@@ -23,7 +23,8 @@ namespace Data.Repositories
         #endregion
 
         #region Methods
-        public IQueryable<User> UserTable => Entities.Include(u => u.Facilities).Where(u => u.IsActive == true);
+
+        public IQueryable<User> UserTable => Entities.Include(u => u.Facilities);
 
         public IQueryable<User> UserTableUntracked => Entities.AsNoTracking();
 
@@ -51,6 +52,11 @@ namespace Data.Repositories
         public User GetUserByUserId(int id)
         {
             return UserTable.Where(u => u.Id== id).FirstOrDefault();
+        }
+
+        public User GetUserByUserName(string username)
+        {
+            return UserTable.Where(u => u.UserName == username).FirstOrDefault();
         }
 
         public IDictionary<string, object> GetModifiedProperties(User entity)

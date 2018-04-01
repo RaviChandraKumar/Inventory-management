@@ -20,7 +20,7 @@ namespace Biz.Interfaces
         /// <returns></returns>
         User GetById(int id);
 
-        User GetByEmailId(string id);
+        User GetByUserName(string email);
 
         /// <summary>
         /// Inserts or updates the model.

@@ -129,5 +129,101 @@ ERROR 2018-03-30 16:11:43,926  7501ms MvcApplication         Application_Error  
 ~/Views/Standard/Login.vbhtml
 ~/Views/Shared/Login.cshtml
 ~/Views/Shared/Login.vbhtml
-ERROR 2018-03-30 16:55:30,577  4983ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
-ERROR 2018-04-01 16:38:04,153  3846ms MvcApplication         Application_Error  - C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\Views\Standard\UserLogin.cshtml(19): error CS1061: 'UserViewModel' does not contain a definition for 'EmailId' and no extension method 'EmailId' accepting a first argument of type 'UserViewModel' could be found (are you missing a using directive or an assembly reference?)
+
+ERROR 2018-03-30 19:36:25,646  1059ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:36:55,406  1030ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:45:31,971  1064ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:45:44,808 13901ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-03-30 19:47:20,106  1023ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:55:50,404  1143ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 19:56:10,919 21658ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 19:58:27,929 20231ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 19:58:39,505 31807ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 19:59:33,221  5855ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 19:59:42,153 14787ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:17:19,648   951ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:19:30,565 18507ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:20:41,494  6587ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:21:02,647 27741ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:21:51,854  8285ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:26:31,536  6328ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:27:59,744 18258ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:29:11,475  1057ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:30:12,071  1174ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:30:41,328   878ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:32:59,843 28834ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:34:41,926 11836ms MvcApplication         Application_Error  - The controller for path '/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:36:06,038 11223ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:38:10,104 59534ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:44:36,626   857ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-30 20:45:11,995 36226ms MvcApplication         Application_Error  - The controller for path '/StandardController/Login' was not found or does not implement IController.
+ERROR 2018-03-30 20:46:23,837  1020ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-31 00:33:02,434 318633ms MvcApplication         Application_Error  - The view 'UserList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/UserList.aspx
+~/Views/Standard/UserList.ascx
+~/Views/Shared/UserList.aspx
+~/Views/Shared/UserList.ascx
+~/Views/Standard/UserList.cshtml
+~/Views/Standard/UserList.vbhtml
+~/Views/Shared/UserList.cshtml
+~/Views/Shared/UserList.vbhtml
+ERROR 2018-03-31 00:34:57,263 433462ms MvcApplication         Application_Error  - The view 'UserList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/UserList.aspx
+~/Views/Standard/UserList.ascx
+~/Views/Shared/UserList.aspx
+~/Views/Shared/UserList.ascx
+~/Views/Standard/UserList.cshtml
+~/Views/Standard/UserList.vbhtml
+~/Views/Shared/UserList.cshtml
+~/Views/Shared/UserList.vbhtml
+ERROR 2018-03-31 00:35:29,029 465228ms MvcApplication         Application_Error  - The view 'UserList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/UserList.aspx
+~/Views/Standard/UserList.ascx
+~/Views/Shared/UserList.aspx
+~/Views/Shared/UserList.ascx
+~/Views/Standard/UserList.cshtml
+~/Views/Standard/UserList.vbhtml
+~/Views/Shared/UserList.cshtml
+~/Views/Shared/UserList.vbhtml
+ERROR 2018-03-31 00:35:35,694 471893ms MvcApplication         Application_Error  - The view 'UserList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/UserList.aspx
+~/Views/Standard/UserList.ascx
+~/Views/Shared/UserList.aspx
+~/Views/Shared/UserList.ascx
+~/Views/Standard/UserList.cshtml
+~/Views/Standard/UserList.vbhtml
+~/Views/Shared/UserList.cshtml
+~/Views/Shared/UserList.vbhtml
+ERROR 2018-03-31 00:36:39,555  1148ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-03-31 00:36:47,257  8849ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-03-31 00:36:48,959 10551ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-03-31 01:18:58,382 50611ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-01 15:22:12,508  1743ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:27:06,707   819ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:31:08,556  1553ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:32:07,873   988ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:32:51,375  1023ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:33:38,105   992ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:34:35,341   871ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:36:59,401   802ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:39:48,281   841ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:45:05,104   936ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:46:21,909   857ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:47:05,689   871ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:47:51,310   843ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:48:42,974   859ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:49:26,927   816ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:52:00,490   832ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:54:26,609   848ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:55:18,516   838ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:56:07,278   831ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:57:09,618  1060ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 15:58:32,549  1217ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 16:01:55,494   828ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 16:03:12,139   802ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 16:04:48,496 97159ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-01 16:05:04,663 113327ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-01 16:05:26,868 135531ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-01 16:07:11,419 12892ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
+ERROR 2018-04-01 16:07:26,319 27792ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
+ERROR 2018-04-01 16:09:08,235 29498ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.

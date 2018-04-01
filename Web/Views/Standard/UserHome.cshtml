@@ -4,10 +4,10 @@
 }
 <div class="tray_main">
     <h2>Facility</h2>
-    <p>
-        @Html.ActionLink("Back To Home", "UserHome", "Standard")
-    </p>
     <table class="table-bordered">
+        @Html.ActionLink("Back To Home", "UserHome", "Standard", new { area = "" })
+    </p>
+    @*<table class="table-bordered">
         @foreach (var Facility in Model.Facilities)
         {
             <tr>
@@ -17,5 +17,6 @@
             </tr>
         }
     </table>
+    </table>*@
     <br />
 </div>

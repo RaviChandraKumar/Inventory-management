@@ -20,6 +20,13 @@ namespace Data.Repositories
         User GetUserByUserId(int id);
 
         /// <summary>
+        /// Gets the by id.
+        /// </summary>
+        /// <param name="id">The id.</param>
+        /// <returns></returns>
+        User GetUserByUserName(string username);
+
+        /// <summary>
         ///  Gets the modified properties.
         /// </summary>
         /// <param name="entity">The entity.</param>

@@ -5,7 +5,6 @@ using Core.Domains;
 using Data.Repositories;
 using System.Text;
 using System.Collections.Generic;
-using System;
 
 namespace Biz.Services
 {
@@ -30,9 +29,9 @@ namespace Biz.Services
             return _userRepo.UserTable;
         }
 
-        public User GetByEmailId(string id)
+        public User GetByUserName(string mail)
         {
-            throw new System.NotImplementedException();
+            return _userRepo.GetUserByUserName(mail);            
         }
 
         public User GetById(int id)
