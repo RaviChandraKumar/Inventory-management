@@ -56,6 +56,10 @@
     <Compile Include="Migrations\201803302303431_March30.Designer.cs">
       <DependentUpon>201803302303431_March30.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804021719582_hjkh.cs" />
+    <Compile Include="Migrations\201804021719582_hjkh.Designer.cs">
+      <DependentUpon>201804021719582_hjkh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FacilityRepository.cs" />
@@ -80,6 +84,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803302303431_March30.resx">
       <DependentUpon>201803302303431_March30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804021719582_hjkh.resx">
+      <DependentUpon>201804021719582_hjkh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

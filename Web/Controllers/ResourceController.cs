@@ -109,6 +109,7 @@ namespace Web.Controllers
                     Name = model.Name,
                     InitialCount = model.InitCount,
                     CurrentCount = model.CurrentCount,
+                    Comment = model.Comment,
                     Description = model.Description,
                     IsActive = model.IsActive,
                     FacilityId = model.FacilityId

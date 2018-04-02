@@ -32,3 +32,4 @@ C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Data\obj\Debug\Data.c
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Data\obj\Debug\Data.csproj.CopyComplete
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Data\obj\Debug\Data.dll
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Data\obj\Debug\Data.pdb
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Data\obj\Debug\Data.Migrations.hjkh.resources

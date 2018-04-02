@@ -60,6 +60,7 @@ namespace Web.Controllers
                     Session["username"] = users.UserName;
                     Session["password"] = users.PasswordHash;
                     Session["facility"] = users.Facilities;
+                    Session["role"] = users.Role;
                     return View("UserHome");
                 }
                 else
@@ -77,7 +78,7 @@ namespace Web.Controllers
         public ActionResult UserHome(string userName)
         {
 
-            return View();
+            return View("FacilityList");
         }
 
         // GET: Standard/Create
