@@ -1,4 +1,5 @@
-﻿using System.Data.Entity.Infrastructure;
+﻿using System;
+using System.Data.Entity.Infrastructure;
 using System.Net;
 using System.Web.Mvc;
 using Biz.Interfaces;
@@ -29,6 +30,8 @@ namespace Web.Controllers
         // GET: Student
         public ViewResult FacilityList(string sortOrder, string currentFilter, string searchString, int? page)
         {
+            
+            //Console.WriteLine(u);
             var facilities = _facilityService.GetAll();
             var model = new StandardIndexViewModel(facilities);
             return View("FacilityList",model);

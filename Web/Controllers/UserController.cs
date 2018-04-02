@@ -40,12 +40,12 @@ namespace Web.Controllers
         // GET: User/Create
         public ActionResult Create()
         {
-            var u = Session["username"].ToString();
+            //var u = Session["username"].ToString();
             var facilities = _facilityService.GetAll();
             var model = new UserViewModel {
                 ListOfAllFacilities = facilities.ToList()
             };
-            return View("Create",u, model);
+            return View("Create",model);
         }
        
         // POST: User/Create
@@ -63,6 +63,9 @@ namespace Web.Controllers
                         Id = userViewModel.Id,
                         UserName = userViewModel.UserName,
                         IsActive = userViewModel.IsActive,
+                        FirstName = userViewModel.FirstName,
+                        LastName = userViewModel.LastName,
+                        Role = userViewModel.Role,
                         PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
                     };
 
@@ -106,6 +109,9 @@ namespace Web.Controllers
 
                 user.Id = model.Id;
                 user.UserName = model.UserName;
+                user.FirstName = model.FirstName;
+                user.LastName = model.LastName;
+                user.Role = model.Role;
                 user.IsActive = model.IsActive;
                 // TODO: Add update logic here
                 _userService.Update(user, model.ListOfFacilityIds);

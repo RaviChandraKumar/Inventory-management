@@ -226,4 +226,70 @@ ERROR 2018-04-01 16:05:04,663 113327ms MvcApplication         Application_Error 
 ERROR 2018-04-01 16:05:26,868 135531ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
 ERROR 2018-04-01 16:07:11,419 12892ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
 ERROR 2018-04-01 16:07:26,319 27792ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
-ERROR 2018-04-01 16:09:08,235 29498ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-01 16:09:08,235 29498ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.ERROR 2018-04-01 18:56:53,310 28950ms MvcApplication         Application_Error  - C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\Views\User\UserList.cshtml(34): error CS1061: 'UserViewModel' does not contain a definition for 'EmailId' and no extension method 'EmailId' accepting a first argument of type 'UserViewModel' could be found (are you missing a using directive or an assembly reference?)
+ERROR 2018-04-01 18:59:07,729 163370ms MvcApplication         Application_Error  - There is already an open DataReader associated with this Command which must be closed first.
+ERROR 2018-04-01 18:59:15,834 171474ms MvcApplication         Application_Error  - There is already an open DataReader associated with this Command which must be closed first.
+ERROR 2018-04-01 19:01:35,156 136842ms MvcApplication         Application_Error  - There is already an open DataReader associated with this Command which must be closed first.
+ERROR 2018-04-01 19:32:30,685 27041ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-01 19:32:51,240 47595ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-01 19:34:04,920  1809ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-01 19:34:42,254 39143ms MvcApplication         Application_Error  - A public action method 'FacilityList' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-01 19:35:18,368  1903ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-01 19:35:44,668 28203ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
+ERROR 2018-04-01 19:36:06,093 49628ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
+ERROR 2018-04-01 19:36:11,880 55415ms MvcApplication         Application_Error  - The controller for path '/Faciltiy/FacilityList' was not found or does not implement IController.
+ERROR 2018-04-01 19:37:17,943  1165ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-01 19:37:38,287  1630ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-01 20:03:39,812 187360ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-02 11:32:24,767 55507477ms MvcApplication         Application_Error  - A public action method 'Resource' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-02 11:32:45,760 55528470ms MvcApplication         Application_Error  - A public action method 'Resource' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-02 11:56:05,514 56928224ms MvcApplication         Application_Error  - The controller for path '/Resource13/Edit' was not found or does not implement IController.
+ERROR 2018-04-02 11:57:27,176 57009886ms MvcApplication         Application_Error  - A public action method 'Edit13' was not found on controller 'Web.Controllers.ResourceController'.

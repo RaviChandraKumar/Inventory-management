@@ -5,18 +5,19 @@
 <div class="tray_main">
     <h2>Facility</h2>
     <table class="table-bordered">
-        @Html.ActionLink("Back To Home", "UserHome", "Standard", new { area = "" })
-    </p>
-    @*<table class="table-bordered">
-        @foreach (var Facility in Model.Facilities)
-        {
-            <tr>
-                <td>
-                    @Html.ActionLink(Facility.Name, "Edit", "Facility", new { id = Facility.Id }) |
-                </td>
-            </tr>
-        }
-    </table>
-    </table>*@
-    <br />
+        @Html.ActionLink("Back To Home", "FacilityList", "Facility")
+        
+        </p>
+        @*<table class="table-bordered">
+            @foreach (var Facility in Model.Facilities)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(Facility.Name, "Edit", "Facility", new { id = Facility.Id }) |
+                    </td>
+                </tr>
+            }
+        </table>
+        </table>*@
+        <br />
 </div>

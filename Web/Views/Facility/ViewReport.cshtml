@@ -23,6 +23,7 @@
                             <th>Resource Name</th>
                             <th>Initial Count</th>
                             <th>Current Count</th>
+                            <th>Comment</th>
                         </tr>
                     </tbody>
                 </table>
@@ -53,19 +54,21 @@
                     {
                         if (res.CurrentCount != res.InitialCount)
                         {
-                        <tr style="color:black; Background:red;">
-                            <td>@Html.DisplayFor(modelItem => res.Name)</td>
-                            <td>@Html.DisplayFor(modelItem => res.InitialCount)</td>
-                            <td>@Html.DisplayFor(modelItem => res.CurrentCount)</td>
-                        </tr>
+                    <tr style="color:white; Background: red;">
+                        <td>@Html.ActionLink(res.Name, "Edit/" + res.Id, "Resource")</td>
+                        <td>@Html.DisplayFor(modelItem => res.InitialCount)</td>
+                        <td>@Html.DisplayFor(modelItem => res.CurrentCount)</td>
+                        <td>@Html.DisplayFor(modelItem => res.Comment)</td>
+                    </tr>
                         }
                         else
                         {
-                         <tr style="color:black; Background:green">
-                            <td>@Html.DisplayFor(modelItem => res.Name)</td>
-                            <td>@Html.DisplayFor(modelItem => res.InitialCount)</td>
-                            <td>@Html.DisplayFor(modelItem => res.CurrentCount)</td>
-                        </tr>
+                    <tr style="color:white; Background:lightgreen">
+                        <td>@Html.ActionLink(res.Name, "Edit/" + res.Id, "Resource")</td>
+                        <td>@Html.DisplayFor(modelItem => res.InitialCount)</td>
+                        <td>@Html.DisplayFor(modelItem => res.CurrentCount)</td>
+                        <td>@Html.DisplayFor(modelItem => res.Comment)</td>
+                    </tr>
                         }
                     }
                 </table>

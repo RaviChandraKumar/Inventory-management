@@ -28,6 +28,9 @@ namespace Web.ViewModels
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
+        [Display(Name = "Comment")]
+        public string Comment { get; set; }
+
         public Facility Facility { get; set; }
 
         public IEnumerable<Facility> ListOfAllFacilities { get; set; }
@@ -40,6 +43,7 @@ namespace Web.ViewModels
             Name = resource.Name;
             Description = resource.Description;
             InitCount = resource.InitialCount;
+            Comment = resource.Comment;
             CurrentCount = resource.CurrentCount;
             IsActive = resource.IsActive;
             Facility = resource.Facility;

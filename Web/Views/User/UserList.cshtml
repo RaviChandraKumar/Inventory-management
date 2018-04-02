@@ -16,6 +16,9 @@
             Email Id
         </th>
         <th>
+            Role
+        </th>
+        <th>
             Is Active
         </th>
         <th>
@@ -31,7 +34,10 @@
 {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.EmailId)
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.IsActive)
@@ -42,7 +48,7 @@
         <td>
             @for (var i = 0; i < item.ListOfFacilitiesAssigned.Count(); i++)
             {
-                @Html.DisplayFor(modelItem => item.ListOfFacilitiesAssigned.ElementAt(i).Resources.ElementAt(0).Name)
+                @Html.DisplayFor(modelItem => item.ListOfFacilitiesAssigned.ElementAt(i).Name)
                 <br />
             }
         </td>
