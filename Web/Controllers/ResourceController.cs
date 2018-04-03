@@ -41,6 +41,28 @@ namespace Web.Controllers
             return View();
         }
 
+        public ActionResult ResourceListCount(int id)
+        {
+            try
+            {
+                var facility = _facilityService.GetById(id);
+            
+
+                if (facility == null)
+                {
+                    return HttpNotFound();
+                }
+
+                var model = new StandardIndexViewModel(facility.Resources);
+                return View("Edit", model);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return View();
+        }
+
         // GET: Resource/Create
         public ActionResult Create()
         {

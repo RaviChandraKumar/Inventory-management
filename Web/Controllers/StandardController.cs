@@ -48,6 +48,7 @@ namespace Web.Controllers
         public ActionResult Login(UserViewModel userViewModel)
         {
             var users = _userService.GetByUserName(userViewModel.UserName);
+            var model = new StandardIndexViewModel(users.Facilities);
             //var model = new StandardIndexViewModel(users);
             //return View("UserList", model);
             var username_from_db = users.UserName;
@@ -61,7 +62,7 @@ namespace Web.Controllers
                     Session["password"] = users.PasswordHash;
                     Session["facility"] = users.Facilities;
                     Session["role"] = users.Role;
-                    return View("UserHome");
+                    return View("UserHome",model);
                 }
                 else
                 {

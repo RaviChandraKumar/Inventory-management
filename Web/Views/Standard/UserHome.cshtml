@@ -8,16 +8,17 @@
         @Html.ActionLink("Back To Home", "FacilityList", "Facility")
         
         </p>
-        @*<table class="table-bordered">
-            @foreach (var Facility in Model.Facilities)
-            {
-                <tr>
-                    <td>
-                        @Html.ActionLink(Facility.Name, "Edit", "Facility", new { id = Facility.Id }) |
-                    </td>
-                </tr>
-            }
+        <table class="table-bordered">
+            @foreach (var item in Model.Facilities)
+        {
+            <tr>
+                <td>
+                    <a href="/Resource/ResourceListCount/@item.Id">@Html.DisplayFor(modelItem => item.Name)</a>
+                    
+                </td>
+            </tr>
+        }
         </table>
-        </table>*@
+        </table>
         <br />
 </div>

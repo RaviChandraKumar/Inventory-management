@@ -293,3 +293,154 @@ ERROR 2018-04-02 11:32:24,767 55507477ms MvcApplication         Application_Erro
 ERROR 2018-04-02 11:32:45,760 55528470ms MvcApplication         Application_Error  - A public action method 'Resource' was not found on controller 'Web.Controllers.FacilityController'.
 ERROR 2018-04-02 11:56:05,514 56928224ms MvcApplication         Application_Error  - The controller for path '/Resource13/Edit' was not found or does not implement IController.
 ERROR 2018-04-02 11:57:27,176 57009886ms MvcApplication         Application_Error  - A public action method 'Edit13' was not found on controller 'Web.Controllers.ResourceController'.
+ERROR 2018-04-02 18:19:32,943   942ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-02 18:26:06,655  9445ms MvcApplication         Application_Error  - The model item passed into the dictionary is of type 'System.Data.Entity.DynamicProxies.User_DAF44420600A008BE5C8431862A2761A2FCB6E41E95DA7D99DBB037DE3CDEC25', but this dictionary requires a model item of type 'Web.ViewModels.StandardIndexViewModel'.
+ERROR 2018-04-02 18:36:29,170 36813ms MvcApplication         Application_Error  - The model item passed into the dictionary is of type 'Web.ViewModels.UserViewModel', but this dictionary requires a model item of type 'Web.ViewModels.StandardIndexViewModel'.
+ERROR 2018-04-02 18:39:24,119  1061ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-02 18:45:02,103 103326ms MvcApplication         Application_Error  - C:\sumedh\Masters\CSE-5320\Proj_Part_2\proj_part_3\Inventory-management\Web\Views\Standard\UserHome.cshtml(12): error CS1061: 'UserViewModel' does not contain a definition for 'Facilities' and no extension method 'Facilities' accepting a first argument of type 'UserViewModel' could be found (are you missing a using directive or an assembly reference?)
+ERROR 2018-04-02 18:48:02,927 160365ms MvcApplication         Application_Error  - C:\sumedh\Masters\CSE-5320\Proj_Part_2\proj_part_3\Inventory-management\Web\Views\Standard\UserHome.cshtml(12): error CS1061: 'UserViewModel' does not contain a definition for 'Facilities' and no extension method 'Facilities' accepting a first argument of type 'UserViewModel' could be found (are you missing a using directive or an assembly reference?)
+ERROR 2018-04-02 22:34:17,158 28971ms MvcApplication         Application_Error  - C:\sumedh\Masters\CSE-5320\Proj_Part_2\proj_part_3\Inventory-management\Web\Views\Standard\UserHome.cshtml(12): error CS0103: The name 'item' does not exist in the current context
+ERROR 2018-04-02 22:37:32,279   918ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-02 23:09:08,110   929ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-02 23:24:32,403   914ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-02 23:27:59,003   973ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-02 23:44:49,645   946ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 00:02:02,117 21721ms MvcApplication         Application_Error  - A public action method 'ResourceListCount' was not found on controller 'Web.Controllers.ResourceController'.
+ERROR 2018-04-03 00:11:39,592   899ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 00:12:16,129 37436ms MvcApplication         Application_Error  - A public action method 'ResourceListCount' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-03 00:13:55,157   911ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 00:21:15,475 441229ms MvcApplication         Application_Error  - A public action method 'ResourceListCount' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-03 00:22:04,913 15917ms MvcApplication         Application_Error  - A public action method 'ResourceListCount' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-03 00:23:35,557   931ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 00:26:22,068   908ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 00:29:59,098   897ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 00:32:18,957  1010ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 00:44:36,239   897ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult ResourceListCount(Int32)' in 'Web.Controllers.ResourceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-03 00:45:20,984 45642ms MvcApplication         Application_Error  - The model item passed into the dictionary is of type 'Web.ViewModels.StandardIndexViewModel', but this dictionary requires a model item of type 'Web.ViewModels.ResourceViewModel'.
+ERROR 2018-04-03 00:48:00,983 133435ms MvcApplication         Application_Error  - The model item passed into the dictionary is of type 'Web.ViewModels.StandardIndexViewModel', but this dictionary requires a model item of type 'Web.ViewModels.ResourceViewModel'.
+ERROR 2018-04-03 00:48:16,737 149189ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-03 00:49:14,239 206691ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-03 00:49:42,430 234882ms MvcApplication         Application_Error  - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Create.aspx
+~/Views/Standard/Create.ascx
+~/Views/Shared/Create.aspx
+~/Views/Shared/Create.ascx
+~/Views/Standard/Create.cshtml
+~/Views/Standard/Create.vbhtml
+~/Views/Shared/Create.cshtml
+~/Views/Shared/Create.vbhtml
+ERROR 2018-04-03 00:49:47,109 239561ms MvcApplication         Application_Error  - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Create.aspx
+~/Views/Standard/Create.ascx
+~/Views/Shared/Create.aspx
+~/Views/Shared/Create.ascx
+~/Views/Standard/Create.cshtml
+~/Views/Standard/Create.vbhtml
+~/Views/Shared/Create.cshtml
+~/Views/Shared/Create.vbhtml
+ERROR 2018-04-03 00:50:03,839 256291ms MvcApplication         Application_Error  - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Create.aspx
+~/Views/Standard/Create.ascx
+~/Views/Shared/Create.aspx
+~/Views/Shared/Create.ascx
+~/Views/Standard/Create.cshtml
+~/Views/Standard/Create.vbhtml
+~/Views/Shared/Create.cshtml
+~/Views/Shared/Create.vbhtml
