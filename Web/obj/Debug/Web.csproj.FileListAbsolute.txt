@@ -194,3 +194,7 @@ C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\obj\Debug\Web.csp
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\obj\Debug\Web.csproj.CopyComplete
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\obj\Debug\Web.dll
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\obj\Debug\Web.pdb
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.Core.dll
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.MVC.dll
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.dll
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Biz.dll.config

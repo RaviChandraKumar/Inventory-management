@@ -293,3 +293,42 @@ ERROR 2018-04-02 11:32:24,767 55507477ms MvcApplication         Application_Erro
 ERROR 2018-04-02 11:32:45,760 55528470ms MvcApplication         Application_Error  - A public action method 'Resource' was not found on controller 'Web.Controllers.FacilityController'.
 ERROR 2018-04-02 11:56:05,514 56928224ms MvcApplication         Application_Error  - The controller for path '/Resource13/Edit' was not found or does not implement IController.
 ERROR 2018-04-02 11:57:27,176 57009886ms MvcApplication         Application_Error  - A public action method 'Edit13' was not found on controller 'Web.Controllers.ResourceController'.
+ERROR 2018-04-02 21:10:31,199 18146ms MvcApplication         Application_Error  - A public action method 'GeneratePDF' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-02 22:59:29,384 35260ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-03 00:19:13,488 181089ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-03 00:52:34,111 230773ms MvcApplication         Application_Error  - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Create.aspx
+~/Views/Standard/Create.ascx
+~/Views/Shared/Create.aspx
+~/Views/Shared/Create.ascx
+~/Views/Standard/Create.cshtml
+~/Views/Standard/Create.vbhtml
+~/Views/Shared/Create.cshtml
+~/Views/Shared/Create.vbhtml
+ERROR 2018-04-03 00:55:00,079 21163ms MvcApplication         Application_Error  - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Create.aspx
+~/Views/Standard/Create.ascx
+~/Views/Shared/Create.aspx
+~/Views/Shared/Create.ascx
+~/Views/Standard/Create.cshtml
+~/Views/Standard/Create.vbhtml
+~/Views/Shared/Create.cshtml
+~/Views/Shared/Create.vbhtml
+ERROR 2018-04-03 00:56:01,856 82939ms MvcApplication         Application_Error  - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Create.aspx
+~/Views/Standard/Create.ascx
+~/Views/Shared/Create.aspx
+~/Views/Shared/Create.ascx
+~/Views/Standard/Create.cshtml
+~/Views/Standard/Create.vbhtml
+~/Views/Shared/Create.cshtml
+~/Views/Shared/Create.vbhtml
+ERROR 2018-04-03 00:56:06,148 87232ms MvcApplication         Application_Error  - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Create.aspx
+~/Views/Standard/Create.ascx
+~/Views/Shared/Create.aspx
+~/Views/Shared/Create.ascx
+~/Views/Standard/Create.cshtml
+~/Views/Standard/Create.vbhtml
+~/Views/Shared/Create.cshtml
+~/Views/Shared/Create.vbhtml
