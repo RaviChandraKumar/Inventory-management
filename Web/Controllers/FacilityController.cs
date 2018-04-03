@@ -4,7 +4,11 @@ using System.Net;
 using System.Web.Mvc;
 using Biz.Interfaces;
 using Core.Domains;
+using Rotativa;
 using Web.ViewModels;
+using System.IO;
+using System.Configuration;
+using System.Text;
 
 namespace Web.Controllers
 {
@@ -42,27 +46,22 @@ namespace Web.Controllers
             var facilities = _facilityService.GetAll();
             var model = new StandardIndexViewModel(facilities);
             return View("ViewReport", model);
+            
+            
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult ViewReport(FacilityViewModel model)
+        [AllowAnonymous]
+        public ActionResult PrintReport()
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
 
-                    return RedirectToAction("Index");
-                }
-            }
+            //var facilities = _facilityService.GetAll();
+            //var model = new StandardIndexViewModel(facilities);
+            //var pdfResult = new ViewAsPdf("ViewReport", model);
+            //return (pdfResult);
+            var iResult = new UrlAsPdf("http://localhost:3367/Facility/ViewReport");
+            
+            return iResult;
 
-            catch (RetryLimitExceededException /* dex */)
-            {
-                //Log the error (uncomment dex variable name and add a line here to write a log.
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
-            }
-            return View();
         }
 
         // GET: Student/Create
