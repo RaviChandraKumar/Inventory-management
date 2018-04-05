@@ -37,6 +37,8 @@ namespace Web.ViewModels
 
         public int FacilityId { get; set; }
 
+        public string SelectedFaciltiy { get; set; }
+
         public ResourceViewModel(Resource resource)
         {
             Id = resource.Id;

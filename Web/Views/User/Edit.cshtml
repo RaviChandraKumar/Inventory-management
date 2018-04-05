@@ -9,67 +9,168 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
-    <h4>UserViewModel</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.Id)
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+    <div class="form-horizontal">
+        <h4>UserViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.Role, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Role, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Role, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Role, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Role, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Role, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <div class="checkbox">
-                @Html.EditorFor(model => model.IsActive)
-                @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsActive)
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ListOfAllFacilities, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.ListBoxFor(model => model.ListOfFacilityIds, new MultiSelectList(Model.ListOfAllFacilities, "Id", "Name"),new { id = "list1" })*@
+                @Html.ListBox("list1", new SelectList(new[] { "" }))
+
+                @*@Html.DropDownList(model => model.ListOfAllFacilities,new SelectList(), new { @id = "list1", @size = 10 })*@
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.ListOfAllFacilities, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.ListBoxFor(model => model.ListOfFacilityIds, new MultiSelectList(Model.ListOfAllFacilities, "Id", "Name"))
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
-        </div>
-    </div>
-</div>
 }
 
 <div>
-    @Html.ActionLink("Back to UserList","UserList","User")
+    @Html.ActionLink("Back to UserList", "UserList", "User")
 </div>
 
+
+
+
+<script type="text/javascript">
+    alert("cool");
+    var listBox = document.getElementById("list1");
+
+    var selected_list_count = '@Model.ListOfFacilitiesAssigned.Count()';
+    var all_facilities_count = '@Model.ListOfAllFacilities.Count()';
+    var myArraySelected = [];
+    var myArraySelectedIndex = []
+    var myArrayAll = []
+    var myArrayAllIndex = [];
+
+    @foreach(var selected_item in Model.ListOfFacilitiesAssigned)
+    {
+        @:myArraySelected.push("@selected_item.Name");
+        @:myArraySelectedIndex.push("@selected_item.Id");
+
+    }
+
+
+    @foreach (var item in Model.ListOfAllFacilities)
+    {
+        @:myArrayAll.push("@item.Name");
+        @:myArrayAllIndex.push("@item.Id");
+    }
+
+    for (var m = 0; m < myArrayAll.length; m++) {
+        if (myArraySelected.includes(myArrayAll[m])) {
+            continue;
+        }
+        else {
+            myArraySelected.push(myArrayAll[m] + "|no");
+            myArraySelectedIndex.push(myArrayAllIndex[m]);
+        }
+    }
+    alert(myArraySelected);
+    
+    for (var k = 0; k < myArraySelected.length; k++) {
+        var element_details = myArraySelected[k].split("|");
+        if (element_details.length > 1)
+        {
+            var option = document.createElement("option");
+            option.text = element_details[0];
+            option.value = myArraySelectedIndex[k]
+            listBox.add(option);
+            //listBox.option[k] = true;
+        }
+        else {
+            var option = document.createElement("option");
+            option.text = element_details[0];
+            option.value = myArraySelectedIndex[k];
+            option.selected = true;
+            listBox.add(option);
+            //if (k == 0) {
+            //    listBox.option[1].selected == true;
+            //}
+            //else {
+            //    alert(k);
+            //    listBox.option[k].selected == true;
+
+            //}
+            
+            
+        }
+
+    }
+
+</script>
+
+@*<script type="text/javascript">
+        var listBox = document.getElementById("list1");
+        alert("cool");
+
+        //var selected_list
+        var selected_list = @Model.ListOfFacilitiesAssigned;
+        alert(selected_list[0]);
+        var all_facilities = @Model.ListOfAllFacilities;
+        for (var i = 0; i < all_facilities.length; i++) {
+            for (var j = 0; j < selected_list.length; j++) {
+                if (all_facilities[i] == selected_list[j]) {
+                    var option = document.createElement("option");
+                    option.text = selected_list[i];
+                    listBox.add(option);
+                    listBox.option[i] = true;
+                }
+                else {
+                    var option = document.createElement("option");
+                    option.text = all_facilities[i];
+                    //option.selected = true;
+                    listBox.add(option);
+
+                }
+
+            }
+        }
+    </script>*@

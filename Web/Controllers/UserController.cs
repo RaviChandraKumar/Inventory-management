@@ -44,7 +44,9 @@ namespace Web.Controllers
             var facilities = _facilityService.GetAll();
             var model = new UserViewModel {
                 ListOfAllFacilities = facilities.ToList()
+                
             };
+            model.IsActive = true;
             return View("Create",model);
         }
        
@@ -93,14 +95,14 @@ namespace Web.Controllers
 
             var model = new UserViewModel(user);
             model.ListOfAllFacilities = _facilityService.GetAll().ToList();
-
+            model.ListOfFacilitiesAssigned = user.Facilities;
             return View("Edit", model);
             //return View();
         }
 
         // POST: User/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, UserViewModel model)
+        public ActionResult Edit(int id, UserViewModel model,FormCollection form)
         {
             try
             {
@@ -118,7 +120,7 @@ namespace Web.Controllers
 
                 return RedirectToAction("UserList");
             }
-            catch
+            catch(Exception e)
             {
                 return View();
             }
