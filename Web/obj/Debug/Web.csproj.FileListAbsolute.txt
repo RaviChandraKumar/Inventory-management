@@ -198,3 +198,9 @@ C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.Core
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.MVC.dll
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.dll
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Biz.dll.config
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\itextsharp.dll
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\itextsharp.xmlworker.dll
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\itextsharp.xml
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\HtmlAgilityPack.dll
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\HtmlAgilityPack.pdb
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\HtmlAgilityPack.xml

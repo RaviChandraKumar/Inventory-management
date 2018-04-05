@@ -7,6 +7,10 @@ using Core.Domains;
 using Rotativa;
 using Web.ViewModels;
 using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using iTextSharp.text.html.simpleparser;
 using System.Configuration;
 using System.Text;
 
@@ -50,17 +54,16 @@ namespace Web.Controllers
             
         }
 
-        [AllowAnonymous]
-        public ActionResult PrintReport()
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Export(string GridHtml)
         {
-
-            //var facilities = _facilityService.GetAll();
-            //var model = new StandardIndexViewModel(facilities);
-            //var pdfResult = new ViewAsPdf("ViewReport", model);
-            //return (pdfResult);
-            var iResult = new UrlAsPdf("http://localhost:3367/Facility/ViewReport");
-            
-            return iResult;
+          
+                var facilities = _facilityService.GetAll();
+                var model = new StandardIndexViewModel(facilities);
+                var pdfResult = new Rotativa.PartialViewAsPdf("ViewReport", model);
+                return (pdfResult);
+           
 
         }
 

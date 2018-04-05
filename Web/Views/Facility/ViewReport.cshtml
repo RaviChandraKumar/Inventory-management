@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Facilities";
 }
-<div class="tray_main">
+<div class="tray_main" id="Grid">
     <h2>Report To Monitor Users Updates On Inventory</h2>
 
     <table class="table-bordered" id="report">
@@ -46,6 +46,7 @@
                     {
                         @Html.DisplayFor(modelItem => usr.UserName)
                         <br />
+
                     }
                 </td>
                 <td>
@@ -74,18 +75,33 @@
                     </table>
                 </td>
             </tr>
+
+
         }
     </table>
-    <br />
+
+
     <div>
-        @Html.ActionLink("Print As PDF", "PrintReport")
+        @using (Html.BeginForm("Export", "Facility", FormMethod.Post))
+        {
+            <input type="hidden" name="GridHtml" />
+            <input type="submit" id="btnSubmit" value="Export" />
+        }
     </div>
 </div>
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {
+            $("input[name='GridHtml']").val($("#Grid").html());
+        });
+    });
+</script>
 
 
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
 

@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" id="listbox">
         @Html.LabelFor(model => model.ListOfAllFacilities, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.ListBoxFor(model => model.ListOfFacilityIds, new MultiSelectList(Model.ListOfAllFacilities, "Id", "Name"))

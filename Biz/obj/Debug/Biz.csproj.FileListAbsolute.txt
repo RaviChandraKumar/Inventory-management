@@ -49,3 +49,6 @@ C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Biz\bin\Debug\System.
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Biz\bin\Debug\System.Web.WebPages.xml
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Biz\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Biz\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Biz\bin\Debug\itextsharp.dll
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Biz\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Biz\bin\Debug\itextsharp.xml
