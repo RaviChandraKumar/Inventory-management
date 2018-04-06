@@ -12,6 +12,8 @@ namespace Web.ViewModels
 
         public IEnumerable<ResourceViewModel> Resources { get; set; }
 
+        public FacilityViewModel FacilityViewModel { get; set; }
+
         public StandardIndexViewModel(IEnumerable<Facility> facility)
         {
             Facilities = facility.Select(x => new FacilityViewModel(x));

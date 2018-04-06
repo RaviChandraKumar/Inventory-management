@@ -198,3 +198,7 @@ C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.Core
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.MVC.dll
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Rotativa.dll
 C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\bin\Biz.dll.config
+C:\Users\User\Documents\Inventory-management-master\Inventory-management\Web\bin\Rotativa.Core.dll
+C:\Users\User\Documents\Inventory-management-master\Inventory-management\Web\bin\Rotativa.dll
+C:\Users\User\Documents\Inventory-management-master\Inventory-management\Web\bin\Rotativa.MVC.dll
+C:\Users\User\Documents\Inventory-management-master\Inventory-management\Web\bin\Biz.dll.config

@@ -11,6 +11,9 @@ namespace Web.Controllers
     {
         public readonly IUserService _userService;
         public readonly IFacilityService _facilityService;
+        private const String USER_ACCESS_ERR_MSG = "Access to this page is Restricted.";
+        private const String USER_LOGIN_ERR_MSG = "You are not logged-in. Please login.";
+
 
         public UserController(IUserService userService, IFacilityService facilityService)
         {
@@ -23,29 +26,95 @@ namespace Web.Controllers
             _userService = userService;
         }
 
+        public bool IsUserLoggedIn()
+        {
+            if (Session["userId"] == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool IsAdmin()
+        {
+            if (Session["role"].Equals("admin"))
+            {
+                return false;
+            }
+            return true;
+        }
+
         // GET: User    
         public ActionResult UserList()
         {
-            var users = _userService.GetAll();
-            var model = new StandardIndexViewModel(users);
-            return View("UserList", model);
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    var users = _userService.GetAll();
+                    var model = new StandardIndexViewModel(users);
+                    return View("UserList", model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome","Standard", new { area = "" });
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login","Standard", new { area = "" });
+
         }
 
         // GET: User/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    return View();
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
         }
 
         // GET: User/Create
         public ActionResult Create()
         {
-            //var u = Session["username"].ToString();
-            var facilities = _facilityService.GetAll();
-            var model = new UserViewModel {
-                ListOfAllFacilities = facilities.ToList()
-            };
-            return View("Create",model);
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    var facilities = _facilityService.GetAll();
+                    var model = new UserViewModel {
+                    ListOfAllFacilities = facilities.ToList()
+                    };
+                    return View("Create",model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome","Standard", new { area = "" });
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login","Standard", new { area = "" });
         }
        
         // POST: User/Create
@@ -53,97 +122,119 @@ namespace Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(UserViewModel userViewModel)
         {
-            try
+            if (IsUserLoggedIn())
             {
-                // TODO: Add insert logic here
-                if (ModelState.IsValid)
+                if (IsAdmin())
                 {
-                    var user = new User()
+                    try
                     {
-                        Id = userViewModel.Id,
-                        UserName = userViewModel.UserName,
-                        IsActive = userViewModel.IsActive,
-                        FirstName = userViewModel.FirstName,
-                        LastName = userViewModel.LastName,
-                        Role = userViewModel.Role,
-                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
-                    };
+                        if (ModelState.IsValid)
+                        {
+                            var user = new User()
+                            {
+                                Id = userViewModel.Id,
+                                UserName = userViewModel.UserName,
+                                IsActive = userViewModel.IsActive,
+                                FirstName = userViewModel.FirstName,
+                                LastName = userViewModel.LastName,
+                                Role = userViewModel.Role,
+                                PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
+                            };
 
-                    _userService.Insert(user, userViewModel.ListOfFacilityIds);
-                    
-                    return RedirectToAction("UserList");
+                            _userService.Insert(user, userViewModel.ListOfFacilityIds);
+
+                            return RedirectToAction("UserList");
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                        return View();
+                    }
                 }
-            }
-            catch(Exception e)
-            {
-                Console.Write(e.StackTrace);
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
-            }
-            return View();
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+                }
+                return RedirectToAction("Login", "Standard", new { area = "" });
         }
 
         // GET: User/Edit/5
         public ActionResult Edit(int id)
         {
-            var user = _userService.GetById(id);
-            if (user == null)
+            if (IsUserLoggedIn())
             {
-                return HttpNotFound();
+                if (IsAdmin())
+                {
+                    var user = _userService.GetById(id);
+                    if (user == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    var model = new UserViewModel(user);
+                    model.ListOfAllFacilities = _facilityService.GetAll().ToList();
+                    return View("Edit", model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
             }
-
-            var model = new UserViewModel(user);
-            model.ListOfAllFacilities = _facilityService.GetAll().ToList();
-
-            return View("Edit", model);
-            //return View();
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
         }
 
         // POST: User/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, UserViewModel model)
         {
-            try
+            if (IsUserLoggedIn())
             {
+                if (IsAdmin())
+                {
+                    try
+                    {
 
-                var user = _userService.GetById(id);
+                        var user = _userService.GetById(id);
 
-                user.Id = model.Id;
-                user.UserName = model.UserName;
-                user.FirstName = model.FirstName;
-                user.LastName = model.LastName;
-                user.Role = model.Role;
-                user.IsActive = model.IsActive;
-                // TODO: Add update logic here
-                _userService.Update(user, model.ListOfFacilityIds);
+                        user.Id = model.Id;
+                        user.UserName = model.UserName;
+                        user.FirstName = model.FirstName;
+                        user.LastName = model.LastName;
+                        user.Role = model.Role;
+                        user.IsActive = model.IsActive;
+                        // TODO: Add update logic here
+                        _userService.Update(user, model.ListOfFacilityIds);
 
-                return RedirectToAction("UserList");
+                        return RedirectToAction("UserList");
+                    }
+                    catch
+                    {
+                        ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                        return View();
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
             }
-            catch
+            else
             {
-                return View();
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
             }
-        }
-
-        // GET: User/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: User/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("UserList");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
         }
     }
 }

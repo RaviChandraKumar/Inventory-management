@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Biz.Interfaces;
 using Core.Domains;
@@ -55,6 +56,21 @@ namespace Biz.Services
             }
         }
 
+        public void UpdateInventory(IEnumerable<Resource> resources)
+        {
+            int Id;
+            Resource res_db;
+            foreach (Resource resource in resources)
+            {
+                Id = resource.Id;
+                res_db = _resourceRepo.GetResourceByResourceId(Id);
+                if(resource.CurrentCount != res_db.CurrentCount)
+                {
+                    res_db.CurrentCount = resource.CurrentCount;
+                    _resourceRepo.UpdateResource(res_db);
+                }
+            }
+        }
     }
 
 

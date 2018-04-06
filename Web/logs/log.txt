@@ -332,3 +332,121 @@ ERROR 2018-04-03 00:56:06,148 87232ms MvcApplication         Application_Error  
 ~/Views/Standard/Create.vbhtml
 ~/Views/Shared/Create.cshtml
 ~/Views/Shared/Create.vbhtml
+ERROR 2018-04-03 15:10:56,680 17942ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 15:24:53,517 203154ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-03 15:38:15,977 463744ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 15:55:16,474 334265ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 16:27:44,031 174130ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 16:29:18,223 268323ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 16:29:54,339 304439ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-03 16:35:15,225 198940ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-05 14:22:30,945 359217ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-05 14:25:39,091 547363ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-05 14:28:06,796 695068ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-05 14:33:53,470 148514ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityList.aspx
+~/Views/Standard/FacilityList.ascx
+~/Views/Shared/FacilityList.aspx
+~/Views/Shared/FacilityList.ascx
+~/Views/Standard/FacilityList.cshtml
+~/Views/Standard/FacilityList.vbhtml
+~/Views/Shared/FacilityList.cshtml
+~/Views/Shared/FacilityList.vbhtml
+ERROR 2018-04-05 14:44:45,672 46442ms MvcApplication         Application_Error  - Value cannot be null.
+Parameter name: source
+ERROR 2018-04-05 15:11:22,340 321705ms MvcApplication         Application_Error  - A public action method 'Edit' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-05 16:36:12,616 848845ms MvcApplication         Application_Error  - The view 'FacilityCheck' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/FacilityCheck.aspx
+~/Views/Standard/FacilityCheck.ascx
+~/Views/Shared/FacilityCheck.aspx
+~/Views/Shared/FacilityCheck.ascx
+~/Views/Standard/FacilityCheck.cshtml
+~/Views/Standard/FacilityCheck.vbhtml
+~/Views/Shared/FacilityCheck.cshtml
+~/Views/Shared/FacilityCheck.vbhtml
+ERROR 2018-04-06 13:28:51,327 449304ms MvcApplication         Application_Error  - C:\Users\User\Documents\Inventory-management-master\Inventory-management\Web\Views\Standard\MonitorFacility.cshtml(70): error CS1061: 'FacilityViewModel' does not contain a definition for 'Description' and no extension method 'Description' accepting a first argument of type 'FacilityViewModel' could be found (are you missing a using directive or an assembly reference?)
+ERROR 2018-04-06 13:54:07,594 1965571ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-06 14:09:36,445 474948ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-06 14:27:01,837 72606ms MvcApplication         Application_Error  - A public action method 'EditorRowForResource' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 16:29:26,935 19386ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 16:37:50,099 64354ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.

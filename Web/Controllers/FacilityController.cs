@@ -18,6 +18,8 @@ namespace Web.Controllers
         #region Properties
 
         private readonly IFacilityService _facilityService;
+        private const String USER_ACCESS_ERR_MSG = "Access to this page is Restricted.";
+        private const String USER_LOGIN_ERR_MSG = "You are not logged-in. Please login.";
 
         #endregion
 
@@ -31,36 +33,95 @@ namespace Web.Controllers
         #endregion
 
 
-        // GET: Student
-        public ViewResult FacilityList(string sortOrder, string currentFilter, string searchString, int? page)
+        public bool IsUserLoggedIn()
         {
-            
-            //Console.WriteLine(u);
-            var facilities = _facilityService.GetAll();
-            var model = new StandardIndexViewModel(facilities);
-            return View("FacilityList",model);
+            if (Session["userId"] == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool IsAdmin()
+        {
+            if (!Session["role"].Equals("admin"))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        // GET: Student
+        public ActionResult FacilityList(string sortOrder, string currentFilter, string searchString, int? page)
+        {
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+
+                    var facilities = _facilityService.GetAll();
+                    var model = new StandardIndexViewModel(facilities);
+                    return View("FacilityList",model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
+
         }
 
         public ActionResult ViewReport()
         {
-            var facilities = _facilityService.GetAll();
-            var model = new StandardIndexViewModel(facilities);
-            return View("ViewReport", model);
-            
-            
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    var facilities = _facilityService.GetAll();
+                    var model = new StandardIndexViewModel(facilities);
+                    return View("ViewReport", model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
+
         }
 
         [AllowAnonymous]
         public ActionResult PrintReport()
         {
-
-            //var facilities = _facilityService.GetAll();
-            //var model = new StandardIndexViewModel(facilities);
-            //var pdfResult = new ViewAsPdf("ViewReport", model);
-            //return (pdfResult);
-            var iResult = new UrlAsPdf("http://localhost:3367/Facility/ViewReport");
-            
-            return iResult;
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    var iResult = new UrlAsPdf("http://localhost:3367/Facility/ViewReport");
+                    return iResult;
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
 
         }
 
@@ -74,142 +135,173 @@ namespace Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(FacilityViewModel model)
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    var facility = new Facility()
-                    {
-                        Id = model.Id,
-                        Name = model.Name,
-                        Landmark = model.Landmark,
-                        Address = model.Address,
-                        Address2 = model.Address2,
-                        City = model.City,
-                        State = model.State,
-                        ZipCode = model.ZipCode,
-                        IsActive = true
-                    };
 
-                    _facilityService.InsertOrUpdate(facility);
-                    return RedirectToAction("FacilityList");
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            var facility = new Facility()
+                            {
+                                Id = model.Id,
+                                Name = model.Name,
+                                Landmark = model.Landmark,
+                                Address = model.Address,
+                                Address2 = model.Address2,
+                                City = model.City,
+                                State = model.State,
+                                ZipCode = model.ZipCode,
+                                IsActive = true
+                            };
+
+                            _facilityService.InsertOrUpdate(facility);
+                            return RedirectToAction("FacilityList");
+                        }
+                    }
+                    catch (RetryLimitExceededException /* dex */)
+                    {
+                        ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                    }
+                    return View();
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
                 }
             }
-            catch (RetryLimitExceededException /* dex */)
+            else
             {
-                //Log the error (uncomment dex variable name and add a line here to write a log.
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
             }
-            return View();
-        }
+            return RedirectToAction("Login", "Standard", new { area = "" });
 
+        }
 
         public ActionResult Edit(int? id)
         {
-            if (id == null)
+            if (IsUserLoggedIn())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (IsAdmin())
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+
+                    var facility = _facilityService.GetById(id??0);
+
+                    if (facility == null)
+                    {
+                        return HttpNotFound();
+                    }
+
+                    var model = new FacilityViewModel(facility);
+                    return View("Edit",model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
             }
-
-            var facility = _facilityService.GetById(id??0);
-
-            if (facility == null)
+            else
             {
-                return HttpNotFound();
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
             }
+            return RedirectToAction("Login", "Standard", new { area = "" });
 
-            var model = new FacilityViewModel(facility);
-            return View("Edit",model);
         }
 
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public ActionResult EditPost(FacilityViewModel model)
         {
-            try
+            if (IsUserLoggedIn())
             {
-                if (ModelState.IsValid)
+                if (IsAdmin())
                 {
-                    var facility = new Facility()
+                    try
                     {
-                        Id = model.Id,
-                        Name = model.Name,
-                        Landmark = model.Landmark,
-                        Address = model.Address,
-                        Address2 = model.Address2,
-                        City = model.City,
-                        State = model.State,
-                        ZipCode = model.ZipCode,
-                        IsActive = model.IsActive
-                    };
+                        if (ModelState.IsValid)
+                        {
+                            var facility = new Facility()
+                            {
+                                Id = model.Id,
+                                Name = model.Name,
+                                Landmark = model.Landmark,
+                                Address = model.Address,
+                                Address2 = model.Address2,
+                                City = model.City,
+                                State = model.State,
+                                ZipCode = model.ZipCode,
+                                IsActive = model.IsActive
+                            };
 
-                    _facilityService.InsertOrUpdate(facility);
-                    return RedirectToAction("FacilityList");
+                            _facilityService.InsertOrUpdate(facility);
+                            return RedirectToAction("FacilityList");
+                        }
+                    }
+                    catch (RetryLimitExceededException /* dex */)
+                    {
+                        //Log the error (uncomment dex variable name and add a line here to write a log.
+                        ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                    }
+
+                    return RedirectToAction("Edit",model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
                 }
             }
-            catch (RetryLimitExceededException /* dex */)
+            else
             {
-                //Log the error (uncomment dex variable name and add a line here to write a log.
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
             }
+            return RedirectToAction("Login", "Standard", new { area = "" });
 
-            return RedirectToAction("Edit",model);
         }
 
         // GET: Student/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
+            if (IsUserLoggedIn())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (IsAdmin())
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+
+                    var facility = _facilityService.GetById(id ?? 0);
+
+                    if (facility == null)
+                    {
+                        return HttpNotFound();
+                    }
+
+                    var model = new FacilityViewModel(facility);
+                    return View("Details", model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                }
             }
-
-            var facility = _facilityService.GetById(id ?? 0);
-
-            if (facility == null)
+            else
             {
-                return HttpNotFound();
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
             }
+            return RedirectToAction("Login", "Standard", new { area = "" });
 
-            var model = new FacilityViewModel(facility);
-            return View("Details", model);
         }
 
-        public ActionResult Delete(int? id, bool? saveChangesError = false)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            if (saveChangesError.GetValueOrDefault())
-            {
-                ViewBag.ErrorMessage = "Delete failed. Try again, and if the problem persists see your system administrator.";
-            }
-
-            var facility = _facilityService.GetById(id??0);
-            var model = new FacilityViewModel(facility);
-            if (facility == null)
-            {
-                return HttpNotFound();
-            }
-            return View("Delete",model);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
-        {
-            try
-            {
-                var facility = _facilityService.GetById(id);
-                _facilityService.Delete(facility);
-            }
-            catch (RetryLimitExceededException/* dex */)
-            {
-                //Log the error (uncomment dex variable name and add a line here to write a log.
-                return RedirectToAction("Delete", new { id = id, saveChangesError = true });
-            }
-            return RedirectToAction("FacilityList");
-        }
     }
 }

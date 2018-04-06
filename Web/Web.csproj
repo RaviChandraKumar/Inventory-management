@@ -280,9 +280,12 @@
     <Content Include="Views\Standard\UserHome.cshtml" />
     <Content Include="Views\Standard\UserLogin.cshtml" />
     <Content Include="Views\Facility\ViewReport.cshtml" />
+    <Content Include="Views\Standard\MonitorFacility.cshtml" />
+    <Content Include="Views\Standard\EditorRowForResource.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

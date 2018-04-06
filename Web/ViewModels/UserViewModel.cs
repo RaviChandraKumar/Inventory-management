@@ -47,6 +47,7 @@ namespace Web.ViewModels
            UserName = user.UserName;
             FirstName = user.FirstName;
             LastName = user.LastName;
+            Role = user.Role;
            IsActive = user.IsActive;
            Password = user.PasswordHash;
            ListOfFacilitiesAssigned = user.Facilities;

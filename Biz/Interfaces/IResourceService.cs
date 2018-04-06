@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Core.Domains;
 
 namespace Biz.Interfaces
@@ -31,5 +32,7 @@ namespace Biz.Interfaces
         /// </summary>
         /// <param name="asset"></param>
         void Delete(Resource resource);
+
+        void UpdateInventory(IEnumerable<Resource> resources);
     }
 }

@@ -13,6 +13,8 @@ namespace Web.Controllers
     {
         public readonly IUserService _userService;
         public readonly IFacilityService _facilityService;
+        public readonly IResourceService _resourceService;
+        private User CurrentUser;
 
         public StandardController(IUserService userService, IFacilityService facilityService)
         {
@@ -24,14 +26,25 @@ namespace Web.Controllers
         {
             _userService = userService;
         }
+
+        public bool IsUserLoggedIn()
+        {
+            if (Session["userId"] == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
         // GET: Standard
         public ActionResult Index()
         {
-            //if (userIsLoggedIn)
-            //{
-            //    return RedirectToAction("UserHome", emailId);
-            //}
-            return View("UserLogin");
+            if (IsUserLoggedIn())
+            {
+                return RedirectToAction("UserHome");
+            }
+
+            return RedirectToAction("Login");
         }
         
         public ActionResult Login()
@@ -47,97 +60,65 @@ namespace Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserViewModel userViewModel)
         {
-            var users = _userService.GetByUserName(userViewModel.UserName);
-            //var model = new StandardIndexViewModel(users);
-            //return View("UserList", model);
-            var username_from_db = users.UserName;
-            var password = users.PasswordHash;
-            if (userViewModel.UserName == username_from_db)
+            CurrentUser = _userService.GetByUserName(userViewModel.UserName);
+            if (CurrentUser != null)
             {
-                if (password == userViewModel.Password)
+                var username_from_db = CurrentUser.UserName;
+                var password = CurrentUser.PasswordHash;
+                if (userViewModel.UserName.Equals(username_from_db) && password.Equals(userViewModel.Password))
                 {
-                    Session["id"] = users.Id;
-                    Session["username"] = users.UserName;
-                    Session["password"] = users.PasswordHash;
-                    Session["facility"] = users.Facilities;
-                    Session["role"] = users.Role;
-                    return View("UserHome");
-                }
-                else
-                {
-                    return View("UserLogin");
+                    Session["userId"] = CurrentUser.Id;
+                    Session["username"] = CurrentUser.UserName;
+                    Session["firstName"] = CurrentUser.FirstName;
+                    Session["role"] = CurrentUser.Role;
+                    return RedirectToAction("UserHome", CurrentUser);
                 }
             }
-            else
-            {
-                return View("UserLogin");
-            }
+           
+
+            return RedirectToAction("Login");
         }
 
         // GET: Standard/Details/5
-        public ActionResult UserHome(string userName)
+        public ActionResult UserHome()
         {
-
-            return View("FacilityList");
+            if (IsUserLoggedIn())
+            {
+                if (CurrentUser == null)
+                {
+                    CurrentUser = _userService.GetByUserName(Session["username"].ToString());
+                }
+                var facilities = CurrentUser.Facilities;
+                var model = new StandardIndexViewModel(facilities);
+                return View("UserHome", model);
+            }
+            return RedirectToAction("Login");
         }
 
-        // GET: Standard/Create
-        public ActionResult Create()
+        // GET:
+        public ActionResult MonitorFacility(int id)
         {
-            return View();
+            if (IsUserLoggedIn())
+            {
+                var facility = _facilityService.GetById(id);
+                var model = new FacilityViewModel(facility);
+                return View("MonitorFacility", model);
+            }
+            return RedirectToAction("Login");
         }
 
-        // POST: Standard/Create
+
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult MonitorFacility(FacilityViewModel facilityViewModel)
         {
-            try
+            if (IsUserLoggedIn())
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                var resources = facilityViewModel.ResourcesAssigned;
+                _resourceService.UpdateInventory(resources);
+                //return View("MonitorFacility", model);
             }
-            catch
-            {
-                return View();
-            }
-        }
-        // POST: Standard/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Standard/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Standard/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Login");
         }
     }
 }
