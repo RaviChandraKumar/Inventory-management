@@ -56,8 +56,7 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add insert logic here
-                if (ModelState.IsValid)
-                {
+              
                     var user = new User()
                     {
                         Id = userViewModel.Id,
@@ -66,13 +65,14 @@ namespace Web.Controllers
                         FirstName = userViewModel.FirstName,
                         LastName = userViewModel.LastName,
                         Role = userViewModel.Role,
-                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8)
+                        PasswordHash = Guid.NewGuid().ToString("d").Substring(1, 8),
+                        PasswordSalt = Guid.NewGuid().ToString("d").Substring(1, 5)
                     };
 
                     _userService.Insert(user, userViewModel.ListOfFacilityIds);
                     
                     return RedirectToAction("UserList");
-                }
+                
             }
             catch(Exception e)
             {

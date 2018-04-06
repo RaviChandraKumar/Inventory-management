@@ -18,28 +18,28 @@
     <div class="form-group">
         @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control",required="true" } })
             @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", required = "true" } })
             @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2"})
         <div class="col-md-10">
-            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", required = "true" } })
             @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(model => model.Role, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Role, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.Role, new { htmlAttributes = new { @class = "form-control", required = "true" } })
             @Html.ValidationMessageFor(model => model.Role, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -63,13 +63,27 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+            <input type="submit" value="Create" class="btn btn-default"onclick="return check()" />
         </div>
     </div>
 
 </div>
 }
-
+<script>
+    function check() {
+        //alert("cool");
+        var dropdown1 = document.getElementById('ListOfFacilityIds');
+        var a = dropdown1.options[dropdown1.selectedIndex];
+        //alert("Please Check the FacilityAssigned to the user");
+        if (a) {
+            return true;
+        }
+        else {
+            alert("Select The Facility You Want to Assign to the user");
+            return false;
+        }
+    }
+</script>
 <div>
     @Html.ActionLink("Back to UserList", "UserList", "User")
 </div>

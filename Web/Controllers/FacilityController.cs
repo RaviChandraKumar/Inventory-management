@@ -56,7 +56,7 @@ namespace Web.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Export(string GridHtml)
+        public ActionResult ViewAsPdf(string GridHtml)
         {
           
                 var facilities = _facilityService.GetAll();

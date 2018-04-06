@@ -82,10 +82,10 @@
 
 
     <div>
-        @using (Html.BeginForm("Export", "Facility", FormMethod.Post))
+        @using (Html.BeginForm("ViewAsPdf", "Facility", FormMethod.Post))
         {
             <input type="hidden" name="GridHtml" />
-            <input type="submit" id="btnSubmit" value="Export" />
+            <input type="submit" id="btnSubmit" value="ViewAsPdf" />
         }
     </div>
 </div>

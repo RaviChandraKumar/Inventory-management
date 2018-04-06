@@ -6,6 +6,9 @@ using System.Web.Mvc;
 using Web.ViewModels;
 using Core.Domains;
 using Biz.Interfaces;
+using System.Text;
+using System.Security.Cryptography;
+using Core.Helpers.Security;
 
 namespace Web.Controllers
 {
@@ -51,7 +54,9 @@ namespace Web.Controllers
             //var model = new StandardIndexViewModel(users);
             //return View("UserList", model);
             var username_from_db = users.UserName;
-            var password = users.PasswordHash;
+            // var password = users.PasswordHash;
+            var password = SecurityHelper.base64Decode(users.PasswordHash);
+
             if (userViewModel.UserName == username_from_db)
             {
                 if (password == userViewModel.Password)
@@ -73,6 +78,9 @@ namespace Web.Controllers
                 return View("UserLogin");
             }
         }
+
+      
+        
 
         // GET: Standard/Details/5
         public ActionResult UserHome(string userName)
@@ -138,6 +146,11 @@ namespace Web.Controllers
             {
                 return View();
             }
+          
+            
         }
+
     }
+   
 }
+

@@ -22,6 +22,10 @@ namespace Web.ViewModels
         [Display(Name = "Password")]
         public string Password { get; set; }
 
+        [MaxLength(20)]
+        [Display(Name = "Password")]
+        public string Passwordsalt { get; set; }
+
         [Required]
         [MaxLength(100)]
         [Display(Name = "First Name")]
@@ -56,6 +60,7 @@ namespace Web.ViewModels
             Role = user.Role;
             IsActive = user.IsActive;
            Password = user.PasswordHash;
+            Passwordsalt = user.PasswordSalt;
            ListOfFacilitiesAssigned = user.Facilities;
         }
 

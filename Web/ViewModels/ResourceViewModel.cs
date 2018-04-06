@@ -34,7 +34,7 @@ namespace Web.ViewModels
         public Facility Facility { get; set; }
 
         public IEnumerable<Facility> ListOfAllFacilities { get; set; }
-
+        [Required]
         public int FacilityId { get; set; }
 
         public ResourceViewModel(Resource resource)

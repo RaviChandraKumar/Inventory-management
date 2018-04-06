@@ -17,7 +17,7 @@ namespace Core.Helpers.Security
         /// <param name="password">plain text password</param>
         /// <param name="salt">password</param>
         /// <returns></returns>
-        public static string HashPassword(string password, ref string salt)
+        public static string HashPassword(string password,  string salt)
         {
             if (string.IsNullOrEmpty(salt))
             {
@@ -38,19 +38,39 @@ namespace Core.Helpers.Security
         /// <param name="messageKey"></param>
         /// <param name="message"></param>
         /// <returns></returns>
-        public static string ComputeHash(string messageKey, string message)
+
+        public static string base64Encode(string sData) // Encode    
         {
-            var key = Encoding.UTF8.GetBytes(messageKey.ToUpper());
-            string hashString;
-
-            using (var hmac = new HMACSHA512(key))
+            try
             {
-                var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(message));
-                hashString = Convert.ToBase64String(hash);
+                byte[] encData_byte = new byte[sData.Length];
+                encData_byte = System.Text.Encoding.UTF8.GetBytes(sData);
+                string encodedData = Convert.ToBase64String(encData_byte);
+                return encodedData;
             }
-
-            return hashString;
+            catch (Exception ex)
+            {
+                throw new Exception("Error in base64Encode" + ex.Message);
+            }
         }
-
-    } // class
-} // namespace
+        public static string base64Decode(string sData) //Decode    
+        {
+            try
+            {
+                var encoder = new System.Text.UTF8Encoding();
+                System.Text.Decoder utf8Decode = encoder.GetDecoder();
+                byte[] todecodeByte = Convert.FromBase64String(sData);
+                int charCount = utf8Decode.GetCharCount(todecodeByte, 0, todecodeByte.Length);
+                char[] decodedChar = new char[charCount];
+                utf8Decode.GetChars(todecodeByte, 0, todecodeByte.Length, decodedChar, 0);
+                string result = new String(decodedChar);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error in base64Decode" + ex.Message);
+            }
+        }
+    }
+} // class
+ // namespace

@@ -389,3 +389,23 @@ ERROR 2018-04-05 09:46:17,666 803251ms MvcApplication         Application_Error 
 ERROR 2018-04-05 09:50:19,557 1045142ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
 ERROR 2018-04-05 09:51:09,297 1094881ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
 ERROR 2018-04-05 15:46:33,220 59647ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 15:58:14,978 51145ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 15:59:00,218 96385ms MvcApplication         Application_Error  - A public action method 'Login' was not found on controller 'Web.Controllers.UserController'.
+ERROR 2018-04-05 15:59:08,136 104303ms MvcApplication         Application_Error  - The controller for path '/Account/Login' was not found or does not implement IController.
+ERROR 2018-04-05 15:59:35,975 132142ms MvcApplication         Application_Error  - A public action method 'userlogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-05 16:03:04,196 194443ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:10,782 201029ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:11,927 202174ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:12,751 202998ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:13,223 203470ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:13,827 204074ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:41:03,196 2473443ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 17:10:06,757 1624379ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 17:17:13,552 2051173ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 17:19:21,049 2178670ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 17:20:45,582 49701ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 18:02:20,839 2544957ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 18:59:12,002  1109ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-05 19:29:14,740  1323ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.ResourceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
