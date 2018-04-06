@@ -418,3 +418,25 @@ ERROR 2018-04-06 17:30:47,753 42964ms MvcApplication         Application_Error  
 Parameter name: parameters
 ERROR 2018-04-06 17:31:44,105 99316ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'isactive' of non-nullable type 'System.Boolean' for method 'System.Web.Mvc.ActionResult UserList(Boolean)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
 Parameter name: parameters
+ERROR 2018-04-06 18:10:06,869 263705ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-06 18:30:20,474   927ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:31:34,942   912ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:40:22,649   954ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:41:19,749   945ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:43:22,381   946ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:43:42,567 21132ms MvcApplication         Application_Error  - C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\Views\User\Edit.cshtml(93): error CS0103: The name 'faciltiy' does not exist in the current context
+ERROR 2018-04-06 18:44:48,664   924ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:46:50,521   894ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:48:36,127   890ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:51:11,171   914ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:52:23,380   954ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
