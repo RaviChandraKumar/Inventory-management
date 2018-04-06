@@ -36,6 +36,7 @@ namespace Data.Repositories
         ///  Gets the table.
         /// </summary>
         IQueryable<Facility> FacilityTable { get; }
+        IQueryable<Facility> InactiveFacilityTable { get; }
 
         /// <summary>
         /// Gets the table untracked.

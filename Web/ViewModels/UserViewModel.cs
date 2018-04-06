@@ -36,7 +36,7 @@ namespace Web.ViewModels
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "OrderAction must be selected")]
         [MaxLength(200)]
         [Display(Name = "Role")]
         public string Role { get; set; }

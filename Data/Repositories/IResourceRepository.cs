@@ -39,6 +39,7 @@ namespace Data.Repositories
         ///  Gets the table.
         /// </summary>
         IQueryable<Resource> ResourceTable { get; }
+        IQueryable<Resource> InactiveResourceTable { get; }
 
         /// <summary>
         /// Gets the table untracked.

@@ -25,6 +25,7 @@ namespace Data.Repositories
         #region Methods
 
         public IQueryable<Facility> FacilityTable => Entities.Include(f => f.Users).Include(f => f.Resources).Where(f => f.IsActive == true);
+        public IQueryable<Facility> InactiveFacilityTable => Entities.Include(f => f.Users).Include(f => f.Resources).Where(f => f.IsActive == false);
 
         public IQueryable<Facility> FacilityTableUntracked => Entities.AsNoTracking();
 

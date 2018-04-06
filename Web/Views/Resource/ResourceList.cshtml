@@ -4,11 +4,12 @@
     ViewBag.Title = "ResourceList";
 }
 
-<h2>AssetList</h2>
+<h2>Active Resource List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<span style="word-spacing: 30px">
+    @Html.ActionLink("InactiveResources", "InactiveResourceList", "Resource")
+    @Html.ActionLink("ActiveRecources", "ResourceList", "Resource")
+</span>
 <table class="table">
     <tr>
         <th>

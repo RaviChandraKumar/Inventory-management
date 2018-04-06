@@ -31,6 +31,11 @@ namespace Biz.Services
             return _resourceRepo.ResourceTable;
         }
 
+        public IQueryable<Resource> GetAllInactive()
+        {
+            return _resourceRepo.InactiveResourceTable;
+        }
+
         public Resource GetById(int id)
         {
             return _resourceRepo.GetResourceByResourceId(id);

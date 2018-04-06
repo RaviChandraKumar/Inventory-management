@@ -32,6 +32,11 @@ namespace Biz.Services
             return _userRepo.UserTable;
         }
 
+        public IQueryable<User> GetAllInactive()
+        {
+            return _userRepo.InactiveUserTable;
+        }
+
         public User GetByUserName(string mail)
         {
             return _userRepo.GetUserByUserName(mail);            

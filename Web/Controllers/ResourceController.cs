@@ -41,6 +41,21 @@ namespace Web.Controllers
             return View();
         }
 
+        public ActionResult InactiveResourceList()
+        {
+            try
+            {
+                var resourceList = _resourceService.GetAllInactive();
+                var model = new StandardIndexViewModel(resourceList);
+                return View("ResourceList", model);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return View();
+        }
+
         // GET: Resource/Create
         public ActionResult Create()
         {

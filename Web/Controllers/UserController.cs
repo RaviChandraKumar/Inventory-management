@@ -24,12 +24,20 @@ namespace Web.Controllers
         }
 
         // GET: User    
+        public ActionResult InactiveUserList()
+
+            {
+                var users = _userService.GetAllInactive();
+                var model = new StandardIndexViewModel(users);
+                return View("UserList", model);
+            }
         public ActionResult UserList()
-        {
+        { 
             var users = _userService.GetAll();
             var model = new StandardIndexViewModel(users);
             return View("UserList", model);
-        }
+            }
+        
 
         // GET: User/Details/5
         public ActionResult Details(int id)
@@ -71,7 +79,7 @@ namespace Web.Controllers
 
                     _userService.Insert(user, userViewModel.ListOfFacilityIds);
                     
-                    return RedirectToAction("UserList");
+                    return RedirectToAction("UserList","User");
                 
             }
             catch(Exception e)

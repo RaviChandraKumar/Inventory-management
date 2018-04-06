@@ -45,6 +45,15 @@ namespace Web.Controllers
             return View("FacilityList",model);
         }
 
+        public ViewResult InactiveFacilityList(string sortOrder, string currentFilter, string searchString, int? page)
+        {
+
+            //Console.WriteLine(u);
+            var facilities = _facilityService.GetAllInactive();
+            var model = new StandardIndexViewModel(facilities);
+            return View("FacilityList", model);
+        }
+
         public ActionResult ViewReport()
         {
             var facilities = _facilityService.GetAll();

@@ -43,6 +43,7 @@ namespace Data.Repositories
         ///  Gets the table.
         /// </summary>
         IQueryable<User> UserTable { get; }
+        IQueryable<User> InactiveUserTable { get; }
 
         /// <summary>
         /// Gets the table untracked.

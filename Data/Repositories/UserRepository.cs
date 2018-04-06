@@ -24,7 +24,8 @@ namespace Data.Repositories
 
         #region Methods
 
-        public IQueryable<User> UserTable => Entities.Include(u => u.Facilities);
+        public IQueryable<User> UserTable => Entities.Include(u => u.Facilities).Where(u => u.IsActive == true);
+        public IQueryable<User> InactiveUserTable => Entities.Include(u => u.Facilities).Where(u => u.IsActive == false);
 
         public IQueryable<User> UserTableUntracked => Entities.AsNoTracking();
 
