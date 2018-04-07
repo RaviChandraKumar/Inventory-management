@@ -58,7 +58,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome","Standard", new { area = "" });
+                    return View("Error");
                 }
             }
             else
@@ -66,6 +66,31 @@ namespace Web.Controllers
                 ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
             }
             return RedirectToAction("Login","Standard", new { area = "" });
+
+        }
+
+        // GET: User    
+        public ActionResult InactiveUserList()
+        {
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    var users = _userService.GetAllInactive();
+                    var model = new StandardIndexViewModel(users);
+                    return View("UserList", model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return View("Error");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
 
         }
 
@@ -81,7 +106,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View("Error");
                 }
             }
             else
@@ -107,7 +132,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome","Standard", new { area = "" });
+                    return View("Error");
                 }
             }
             else
@@ -155,7 +180,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View("Error");
                 }
                 }
                 else
@@ -184,7 +209,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View("Error");
                 }
             }
             else
@@ -227,7 +252,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View("Error");
                 }
             }
             else

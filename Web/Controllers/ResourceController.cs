@@ -67,7 +67,40 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View("Error");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
+
+        }
+
+
+        public ActionResult InactiveResourceList()
+        {
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    try
+                    {
+                        var resourceList = _resourceService.GetAllInactive();
+                        var model = new StandardIndexViewModel(resourceList);
+                        return View("ResourceList", model);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                    return View();
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return View("Error");
                 }
             }
             else
@@ -95,7 +128,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View("Error");
                 }
             }
             else
@@ -129,7 +162,6 @@ namespace Web.Controllers
 
                             _resourceService.InsertOrUpdate(resource);
                             return RedirectToAction("ResourceList");
-                            //return View("ResourceList", model);
                         }
                     }
                     catch(Exception e)
@@ -142,7 +174,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return RedirectToAction("Error");
                 }
             }
             else
@@ -173,7 +205,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return RedirectToAction("Error");
                 }
             }
             else
@@ -219,7 +251,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return RedirectToAction("Error");
                 }
             }
             else

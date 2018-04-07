@@ -66,7 +66,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return View();
+                    return View("Error");
                 }
             }
             else
@@ -74,6 +74,30 @@ namespace Web.Controllers
                 ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
             }
             return RedirectToAction("Login", "Standard", new { area = "" });
+
+        }
+
+        public ViewResult InactiveFacilityList(string sortOrder, string currentFilter, string searchString, int? page)
+        {
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    var facilities = _facilityService.GetAllInactive();
+                    var model = new StandardIndexViewModel(facilities);
+                    return View("FacilityList", model);
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return View("Error");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return View("Error");
 
         }
 
@@ -101,15 +125,18 @@ namespace Web.Controllers
 
         }
 
-        [AllowAnonymous]
-        public ActionResult PrintReport()
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult ViewAsPdf(string GridHtml)
         {
             if (IsUserLoggedIn())
             {
                 if (IsAdmin())
                 {
-                    var iResult = new UrlAsPdf("http://localhost:3367/Facility/ViewReport");
-                    return iResult;
+                    var facilities = _facilityService.GetAll();
+                    var model = new StandardIndexViewModel(facilities);
+                    var pdfResult = new Rotativa.PartialViewAsPdf("ViewReport", model);
+                    return (pdfResult);
                 }
                 else
                 {
@@ -122,8 +149,8 @@ namespace Web.Controllers
                 ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
             }
             return RedirectToAction("Login", "Standard", new { area = "" });
-
         }
+
 
         // GET: Student/Create
         public ActionResult Create()
@@ -137,7 +164,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return View();
+                    return View("Error");
                 }
             }
             else

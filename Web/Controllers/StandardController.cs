@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Web.ViewModels;
 using Core.Domains;
 using Biz.Interfaces;
+using Core.Helpers.Security;
 
 namespace Web.Controllers
 {
@@ -64,7 +65,7 @@ namespace Web.Controllers
             if (CurrentUser != null)
             {
                 var username_from_db = CurrentUser.UserName;
-                var password = CurrentUser.PasswordHash;
+                var password = SecurityHelper.base64Decode(CurrentUser.PasswordHash);
                 if (userViewModel.UserName.Equals(username_from_db) && password.Equals(userViewModel.Password))
                 {
                     Session["userId"] = CurrentUser.Id;
@@ -74,9 +75,8 @@ namespace Web.Controllers
                     return RedirectToAction("UserHome", CurrentUser);
                 }
             }
-           
-
-            return RedirectToAction("Login");
+            ModelState.AddModelError("validate", "Username or password is incorrect");
+            return View();
         }
 
         // GET: Standard/Details/5
