@@ -47,7 +47,14 @@ namespace Web.Controllers
 
             return RedirectToAction("Login");
         }
-        
+
+        public ActionResult LogOff()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index");
+        }
+
+
         public ActionResult Login()
         {
             //if (userIsLoggedIn)

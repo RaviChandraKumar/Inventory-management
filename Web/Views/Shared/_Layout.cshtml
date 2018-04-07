@@ -33,10 +33,20 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "FacilityList", "Facility")</li>
-                    <li>@Html.ActionLink("Add New Facility", "Create", "Facility")</li>
-                    <li> @Html.ActionLink("Add New User", "Create", "User")</li>
-                    <li>@Html.ActionLink("Add New Resource", "Create", "Resource")</li>
-                    <li>@Html.ActionLink("Report", "ViewReport", "Facility")</li>
+                    @{ var role = HttpContext.Current.Session["role"]; }
+                    @if (role != null && @role.ToString().Equals("admin"))
+                    {
+                        <li>@Html.ActionLink("Add New Facility", "Create", "Facility")</li>
+                        <li> @Html.ActionLink("Add New User", "Create", "User")</li>
+                        <li>@Html.ActionLink("Add New Resource", "Create", "Resource")</li>
+                        <li>@Html.ActionLink("Report", "ViewReport", "Facility")</li>
+                    }
+                    @*else
+                    {
+                        <li>@Html.ActionLink("Home", "FacilityList", "Facility")</li>
+
+                    }*@
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

@@ -440,3 +440,75 @@ ERROR 2018-04-06 18:51:11,171   914ms MvcApplication         Application_Error  
 Parameter name: parameters
 ERROR 2018-04-06 18:52:23,380   954ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
 Parameter name: parameters
+ERROR 2018-04-06 21:02:26,816 190327ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-06 21:02:34,317  1433ms MvcApplication         Application_Error  - The controller for path '/__browserLink/requestData/5fa85d12396645b0a315e05c539f723a' was not found or does not implement IController.
+ERROR 2018-04-06 21:15:08,144 755261ms MvcApplication         Application_Error  - A public action method 'LogOff' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 21:39:25,305 23326ms MvcApplication         Application_Error  - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/User/Create.aspx
+~/Views/User/Create.ascx
+~/Views/Shared/Create.aspx
+~/Views/Shared/Create.ascx
+~/Views/User/User.master
+~/Views/Shared/User.master
+~/Views/User/User.cshtml
+~/Views/User/User.vbhtml
+~/Views/Shared/User.cshtml
+~/Views/Shared/User.vbhtml
+ERROR 2018-04-06 21:49:14,517 34974ms MvcApplication         Application_Error  - C:\Users\Public\GitRepos\masterBranch\Inventory-management\Web\Views\Standard\UserLogin.cshtml(21): error CS1503: Argument 3: cannot convert from '<anonymous type: string class>' to 'string'
+ERROR 2018-04-06 21:49:14,633 35090ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,655 35112ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,670 35128ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,692 35149ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,715 35172ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,727 35184ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,737 35194ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,753 35210ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,769 35227ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,820 35277ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,841 35298ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,854 35311ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,867 35324ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,882 35339ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,890 35347ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,904 35361ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,916 35373ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,932 35389ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:14,962 35419ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,000 35457ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,209 35666ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,276 35733ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,315 35772ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,324 35781ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,334 35791ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,341 35798ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,348 35805ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,360 35818ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,370 35827ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,379 35836ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,387 35844ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,392 35849ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,400 35857ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,406 35864ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,415 35872ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,425 35882ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,434 35891ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,443 35900ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,452 35909ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,463 35920ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:15,476 35933ms MvcApplication         Application_Error  - A potentially dangerous Request.QueryString value was detected from the client (message="...ert from '<anonymous type: str...").
+ERROR 2018-04-06 21:49:55,364  1823ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 21:50:28,454 34913ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-06 21:56:10,609  1737ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 21:56:46,898 38026ms MvcApplication         Application_Error  - The view 'Login' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Standard/Login.aspx
+~/Views/Standard/Login.ascx
+~/Views/Shared/Login.aspx
+~/Views/Shared/Login.ascx
+~/Views/Standard/Login.cshtml
+~/Views/Standard/Login.vbhtml
+~/Views/Shared/Login.cshtml
+~/Views/Shared/Login.vbhtml
+ERROR 2018-04-06 21:59:29,366  1601ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 22:01:45,505  3412ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 22:01:58,880 16787ms MvcApplication         Application_Error  - A public action method 'Login' was not found on controller 'Web.Controllers.UserController'.
+ERROR 2018-04-06 22:06:41,364 76558ms MvcApplication         Application_Error  - A public action method 'LogOff' was not found on controller 'Web.Controllers.StandardController'.

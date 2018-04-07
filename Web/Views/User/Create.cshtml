@@ -18,7 +18,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control",required="true" } })
+            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control",required="true",type="email" } })
             @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -40,8 +40,8 @@
         @Html.LabelFor(model =>model.Role, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             <div id="Role" >
-            Admin    @Html.RadioButtonFor(model => model.Role,"Admin")
-             User    @Html.RadioButtonFor(model => model.Role, "User", new { @checked = "checked" })
+            admin    @Html.RadioButtonFor(model => model.Role,"admin")
+             user    @Html.RadioButtonFor(model => model.Role, "user", new { @checked = "checked" })
                 @Html.ValidationMessageFor(model => model.Role, "", new { @class = "text-danger" , required = "true" })
             </div>
         </div>

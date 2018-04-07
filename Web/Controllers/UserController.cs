@@ -153,7 +153,8 @@ namespace Web.Controllers
                 {
                     try
                     {
-                        if (ModelState.IsValid)
+                        var user_in_db = _userService.GetByUserName(userViewModel.UserName);
+                        if (user_in_db == null)
                         {
                             var user = new User()
                             {
@@ -169,6 +170,11 @@ namespace Web.Controllers
                             _userService.Insert(user, userViewModel.ListOfFacilityIds);
 
                             return RedirectToAction("UserList");
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Username exists in the system,please try with a different email or contact the admin");
+                            return RedirectToAction("Create");
                         }
                     }
                     catch (Exception e)

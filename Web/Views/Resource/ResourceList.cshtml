@@ -58,8 +58,7 @@
             @Html.DisplayFor(modelItem => item.Facility.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            @Html.ActionLink("Edit/Deactivate Resource", "Edit", new { id = item.Id })
         </td>
     </tr>
     }
