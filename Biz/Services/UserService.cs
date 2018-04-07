@@ -6,6 +6,8 @@ using Core.Domains;
 using Data.Repositories;
 using System.Text;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using Core.Helpers.Security;
 
 namespace Biz.Services
 {
@@ -30,6 +32,11 @@ namespace Biz.Services
             return _userRepo.UserTable;
         }
 
+        public IQueryable<User> GetAllInactive()
+        {
+            return _userRepo.InactiveUserTable;
+        }
+
         public User GetByUserName(string mail)
         {
             return _userRepo.GetUserByUserName(mail);            
@@ -47,6 +54,8 @@ namespace Biz.Services
                 DateTime currentdateTime = new DateTime();
                 user.CreatedTimeStamp = currentdateTime;
                 user.LastModifiedTimeStamp = currentdateTime;
+                sendEmailToUser(user);
+                user.PasswordHash = SecurityHelper.base64Encode(user.PasswordHash);
                 _userRepo.InsertNewUserForExisitingFacility(user, listOfFacilityIds);
             }
         }

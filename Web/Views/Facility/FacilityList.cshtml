@@ -3,14 +3,11 @@
     ViewBag.Title = "Facilities";
 }
 <div class="tray_main">
-    <h2>Facility</h2>
-
-    <p>
-        @Html.ActionLink("Create New", "Create", "Facility")
-        @Html.ActionLink("Create New User", "Create", "User")
-        @Html.ActionLink("Create New Asset", "Create", "Resource")
-        @Html.ActionLink("View Report", "ViewReport", "Facility")
-    </p>
+    <h2>Active Facility List</h2>
+    <span style="word-spacing: 30px">
+        @Html.ActionLink("InactiveFacilities", "InactiveFacilityList", "Facility")
+        @Html.ActionLink("ActiveFacilities", "FacilityList", "Facility")
+    </span>
     <table class="table-bordered">
         <tr>
             <th>
@@ -28,19 +25,19 @@
 
         @foreach (var item in Model.Facilities)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Landmark)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Landmark)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
         }
     </table>
     <br />

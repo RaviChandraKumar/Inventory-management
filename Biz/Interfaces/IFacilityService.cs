@@ -12,6 +12,7 @@ namespace Biz.Interfaces
         /// </summary>
         /// <returns></returns>
         IQueryable<Facility> GetAll();
+        IQueryable<Facility> GetAllInactive();
         /// <summary>
         /// Gets the by identifier.
         /// </summary>

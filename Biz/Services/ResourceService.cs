@@ -32,6 +32,11 @@ namespace Biz.Services
             return _resourceRepo.ResourceTable;
         }
 
+        public IQueryable<Resource> GetAllInactive()
+        {
+            return _resourceRepo.InactiveResourceTable;
+        }
+
         public Resource GetById(int id)
         {
             return _resourceRepo.GetResourceByResourceId(id);
@@ -64,13 +69,14 @@ namespace Biz.Services
             {
                 Id = resource.Id;
                 res_db = _resourceRepo.GetResourceByResourceId(Id);
-                if(resource.CurrentCount != res_db.CurrentCount)
+                if (resource.CurrentCount != res_db.CurrentCount)
                 {
                     res_db.CurrentCount = resource.CurrentCount;
                     _resourceRepo.UpdateResource(res_db);
                 }
             }
         }
+
     }
 
 

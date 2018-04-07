@@ -33,6 +33,11 @@ namespace Biz.Services
             return _facilityRepo.FacilityTable;
         }
 
+        public IQueryable<Facility> GetAllInactive()
+        {
+            return _facilityRepo.InactiveFacilityTable;
+        }
+
         public void Delete(Facility facility)
         {
             _facilityRepo.DeleteFacility(facility);

@@ -11,6 +11,7 @@ namespace Biz.Interfaces
         /// </summary>
         /// <returns></returns>
         IQueryable<Resource> GetAll();
+        IQueryable<Resource> GetAllInactive();
 
         /// <summary>
         /// Gets the by identifier.

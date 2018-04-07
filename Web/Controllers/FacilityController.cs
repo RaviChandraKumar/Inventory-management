@@ -66,7 +66,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View();
                 }
             }
             else
@@ -90,7 +90,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View();
                 }
             }
             else
@@ -114,7 +114,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View();
                 }
             }
             else
@@ -128,7 +128,23 @@ namespace Web.Controllers
         // GET: Student/Create
         public ActionResult Create()
         {
-            return View();
+            if (IsUserLoggedIn())
+            {
+                if (IsAdmin())
+                {
+                    return View();
+                }
+                else
+                {
+                    ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
+                    return View();
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", USER_LOGIN_ERR_MSG);
+            }
+            return RedirectToAction("Login", "Standard", new { area = "" });
         }
 
         [HttpPost]
@@ -170,7 +186,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View();
                 }
             }
             else
@@ -205,7 +221,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View();
                 }
             }
             else
@@ -247,7 +263,6 @@ namespace Web.Controllers
                     }
                     catch (RetryLimitExceededException /* dex */)
                     {
-                        //Log the error (uncomment dex variable name and add a line here to write a log.
                         ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
                     }
 
@@ -256,7 +271,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View();
                 }
             }
             else
@@ -292,7 +307,7 @@ namespace Web.Controllers
                 else
                 {
                     ModelState.AddModelError("", USER_ACCESS_ERR_MSG);
-                    return RedirectToAction("UserHome", "Standard", new { area = "" });
+                    return View();
                 }
             }
             else

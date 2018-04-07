@@ -332,121 +332,111 @@ ERROR 2018-04-03 00:56:06,148 87232ms MvcApplication         Application_Error  
 ~/Views/Standard/Create.vbhtml
 ~/Views/Shared/Create.cshtml
 ~/Views/Shared/Create.vbhtml
-ERROR 2018-04-03 15:10:56,680 17942ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-03 15:24:53,517 203154ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
-ERROR 2018-04-03 15:38:15,977 463744ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-03 15:55:16,474 334265ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-03 16:27:44,031 174130ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-03 16:29:18,223 268323ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-03 16:29:54,339 304439ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-03 16:35:15,225 198940ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-05 14:22:30,945 359217ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-05 14:25:39,091 547363ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-05 14:28:06,796 695068ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-05 14:33:53,470 148514ms MvcApplication         Application_Error  - The view 'FacilityList' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityList.aspx
-~/Views/Standard/FacilityList.ascx
-~/Views/Shared/FacilityList.aspx
-~/Views/Shared/FacilityList.ascx
-~/Views/Standard/FacilityList.cshtml
-~/Views/Standard/FacilityList.vbhtml
-~/Views/Shared/FacilityList.cshtml
-~/Views/Shared/FacilityList.vbhtml
-ERROR 2018-04-05 14:44:45,672 46442ms MvcApplication         Application_Error  - Value cannot be null.
-Parameter name: source
-ERROR 2018-04-05 15:11:22,340 321705ms MvcApplication         Application_Error  - A public action method 'Edit' was not found on controller 'Web.Controllers.StandardController'.
-ERROR 2018-04-05 16:36:12,616 848845ms MvcApplication         Application_Error  - The view 'FacilityCheck' or its master was not found or no view engine supports the searched locations. The following locations were searched:
-~/Views/Standard/FacilityCheck.aspx
-~/Views/Standard/FacilityCheck.ascx
-~/Views/Shared/FacilityCheck.aspx
-~/Views/Shared/FacilityCheck.ascx
-~/Views/Standard/FacilityCheck.cshtml
-~/Views/Standard/FacilityCheck.vbhtml
-~/Views/Shared/FacilityCheck.cshtml
-~/Views/Shared/FacilityCheck.vbhtml
-ERROR 2018-04-06 13:28:51,327 449304ms MvcApplication         Application_Error  - C:\Users\User\Documents\Inventory-management-master\Inventory-management\Web\Views\Standard\MonitorFacility.cshtml(70): error CS1061: 'FacilityViewModel' does not contain a definition for 'Description' and no extension method 'Description' accepting a first argument of type 'FacilityViewModel' could be found (are you missing a using directive or an assembly reference?)
-ERROR 2018-04-06 13:54:07,594 1965571ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
-ERROR 2018-04-06 14:09:36,445 474948ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
-ERROR 2018-04-06 14:27:01,837 72606ms MvcApplication         Application_Error  - A public action method 'EditorRowForResource' was not found on controller 'Web.Controllers.StandardController'.
-ERROR 2018-04-06 16:29:26,935 19386ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
-ERROR 2018-04-06 16:37:50,099 64354ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-03 16:14:10,284 55171368ms MvcApplication         Application_Error  - A public action method 'Details' was not found on controller 'Web.Controllers.ResourceController'.
+ERROR 2018-04-03 17:02:16,936 34642ms MvcApplication         Application_Error  - A public action method 'PrintReport' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-03 17:26:32,568 53408ms MvcApplication         Application_Error  - A public action method 'PrintReport' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-03 17:32:21,780 40362ms MvcApplication         Application_Error  - A public action method 'PrintReport' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-03 18:13:54,478 425651ms MvcApplication         Application_Error  - The document has no pages.
+ERROR 2018-04-03 18:17:25,975 637148ms MvcApplication         Application_Error  - Invalid nested tag td found, expected closing tag br.
+ERROR 2018-04-03 18:24:48,569 185956ms MvcApplication         Application_Error  - Invalid nested tag td found, expected closing tag br.
+ERROR 2018-04-03 18:27:51,126 368513ms MvcApplication         Application_Error  - Invalid nested tag td found, expected closing tag br.
+ERROR 2018-04-03 18:30:27,880 525267ms MvcApplication         Application_Error  - The number of columns in PdfPTable constructor must be greater than zero.
+ERROR 2018-04-03 18:33:00,255 677642ms MvcApplication         Application_Error  - Invalid nested tag td found, expected closing tag br.
+ERROR 2018-04-03 18:33:11,564  1331ms MvcApplication         Application_Error  - The controller for path '/__browserLink/requestData/7ee4459de22e48f6974751d32f4745a4' was not found or does not implement IController.
+ERROR 2018-04-03 18:34:23,139 72906ms MvcApplication         Application_Error  - Invalid nested tag td found, expected closing tag br.
+ERROR 2018-04-03 18:35:41,661 151428ms MvcApplication         Application_Error  - Invalid nested tag td found, expected closing tag br.
+ERROR 2018-04-03 18:37:06,340 236107ms MvcApplication         Application_Error  - Invalid nested tag td found, expected closing tag br.
+ERROR 2018-04-03 18:41:08,273 478040ms MvcApplication         Application_Error  - Invalid nested tag td found, expected closing tag br.
+ERROR 2018-04-03 18:47:18,756 848522ms MvcApplication         Application_Error  - The number of columns in PdfPTable constructor must be greater than zero.
+ERROR 2018-04-03 18:53:14,962 1204729ms MvcApplication         Application_Error  - The number of columns in PdfPTable constructor must be greater than zero.
+ERROR 2018-04-03 19:03:52,800 1842567ms MvcApplication         Application_Error  - The number of columns in PdfPTable constructor must be greater than zero.
+ERROR 2018-04-03 19:11:57,200 2326967ms MvcApplication         Application_Error  - The number of columns in PdfPTable constructor must be greater than zero.
+ERROR 2018-04-03 19:12:31,777 2361544ms MvcApplication         Application_Error  - The number of columns in PdfPTable constructor must be greater than zero.
+ERROR 2018-04-03 19:17:11,876 2641643ms MvcApplication         Application_Error  - Invalid nested tag form found, expected closing tag input.
+ERROR 2018-04-03 19:17:52,946 2682713ms MvcApplication         Application_Error  - Invalid nested tag form found, expected closing tag input.
+ERROR 2018-04-03 19:34:03,078 3652845ms MvcApplication         Application_Error  - Invalid nested tag form found, expected closing tag input.
+ERROR 2018-04-03 19:34:42,929 3692696ms MvcApplication         Application_Error  - Invalid nested tag form found, expected closing tag input.
+ERROR 2018-04-03 19:36:56,597 3826364ms MvcApplication         Application_Error  - Invalid nested tag form found, expected closing tag input.
+ERROR 2018-04-03 21:55:47,253 50412ms MvcApplication         Application_Error  - The view 'Export' or its master was not found, searched locations: 
+~/Views/Facility/Export.aspx
+~/Views/Facility/Export.ascx
+~/Views/Shared/Export.aspx
+~/Views/Shared/Export.ascx
+~/Views/Facility/Export.cshtml
+~/Views/Facility/Export.vbhtml
+~/Views/Shared/Export.cshtml
+~/Views/Shared/Export.vbhtml
+
+ERROR 2018-04-04 21:25:11,227 83685637ms MvcApplication         Application_Error  - C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\Views\User\Edit.cshtml(76): error CS0103: The name 'listBox' does not exist in the current context
+ERROR 2018-04-05 08:47:11,412  1408ms MvcApplication         Application_Error  - The controller for path '/__browserLink/requestData/7d2bbf09f890489eb2377a25326223cc' was not found or does not implement IController.
+ERROR 2018-04-05 08:51:47,661 277657ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-05 09:18:24,931 1874927ms MvcApplication         Application_Error  - The view 'Delete' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/User/Delete.aspx
+~/Views/User/Delete.ascx
+~/Views/Shared/Delete.aspx
+~/Views/Shared/Delete.ascx
+~/Views/User/Delete.cshtml
+~/Views/User/Delete.vbhtml
+~/Views/Shared/Delete.cshtml
+~/Views/Shared/Delete.vbhtml
+ERROR 2018-04-05 09:21:06,687 2036683ms MvcApplication         Application_Error  - A public action method 'Details' was not found on controller 'Web.Controllers.ResourceController'.
+ERROR 2018-04-05 09:22:48,510 2138506ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.ResourceController'.
+ERROR 2018-04-05 09:25:37,651 2307647ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.ResourceController'.
+ERROR 2018-04-05 09:28:07,088 2457084ms MvcApplication         Application_Error  - A public action method 'Index' was not found on controller 'Web.Controllers.FacilityController'.
+ERROR 2018-04-05 09:34:13,691 79275ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 09:39:29,980 395564ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 09:46:17,666 803251ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 09:50:19,557 1045142ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 09:51:09,297 1094881ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 15:46:33,220 59647ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 15:58:14,978 51145ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 15:59:00,218 96385ms MvcApplication         Application_Error  - A public action method 'Login' was not found on controller 'Web.Controllers.UserController'.
+ERROR 2018-04-05 15:59:08,136 104303ms MvcApplication         Application_Error  - The controller for path '/Account/Login' was not found or does not implement IController.
+ERROR 2018-04-05 15:59:35,975 132142ms MvcApplication         Application_Error  - A public action method 'userlogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-05 16:03:04,196 194443ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:10,782 201029ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:11,927 202174ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:12,751 202998ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:13,223 203470ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:03:13,827 204074ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 16:41:03,196 2473443ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 17:10:06,757 1624379ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 17:17:13,552 2051173ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 17:19:21,049 2178670ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 17:20:45,582 49701ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-05 18:02:20,839 2544957ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-05 18:59:12,002  1109ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-05 19:29:14,740  1323ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.ResourceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 14:54:46,986 160796ms MvcApplication         Application_Error  - A public action method 'userlogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 14:54:56,664 170473ms MvcApplication         Application_Error  - The controller for path '/Login/Standard' was not found or does not implement IController.
+ERROR 2018-04-06 14:58:53,477  1193ms MvcApplication         Application_Error  - A public action method 'UserLogin' was not found on controller 'Web.Controllers.StandardController'.
+ERROR 2018-04-06 17:30:28,091 23303ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'isactive' of non-nullable type 'System.Boolean' for method 'System.Web.Mvc.ActionResult UserList(Boolean)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 17:30:47,753 42964ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'isactive' of non-nullable type 'System.Boolean' for method 'System.Web.Mvc.ActionResult UserList(Boolean)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 17:31:44,105 99316ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'isactive' of non-nullable type 'System.Boolean' for method 'System.Web.Mvc.ActionResult UserList(Boolean)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:10:06,869 263705ms MvcApplication         Application_Error  - Object reference not set to an instance of an object.
+ERROR 2018-04-06 18:30:20,474   927ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:31:34,942   912ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:40:22,649   954ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:41:19,749   945ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:43:22,381   946ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:43:42,567 21132ms MvcApplication         Application_Error  - C:\Users\Public\GitRepos\nanditBranch\Inventory-management\Web\Views\User\Edit.cshtml(93): error CS0103: The name 'faciltiy' does not exist in the current context
+ERROR 2018-04-06 18:44:48,664   924ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:46:50,521   894ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:48:36,127   890ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:51:11,171   914ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR 2018-04-06 18:52:23,380   954ms MvcApplication         Application_Error  - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters

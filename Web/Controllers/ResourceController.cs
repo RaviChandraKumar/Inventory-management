@@ -38,7 +38,7 @@ namespace Web.Controllers
 
         public bool IsAdmin()
         {
-            if (Session["role"].Equals("admin"))
+            if (!Session["role"].Equals("admin"))
             {
                 return false;
             }
